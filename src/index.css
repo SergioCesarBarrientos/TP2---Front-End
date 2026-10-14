@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+  --color-primario: #1976D2;
+  --color-secundario: #2E7D32;
+  --color-primario-suave: #E3F2FD;
+  --color-secundario-suave: #A5D6A7;
+  --color-texto-principal: #263238;
+  --color-texto-secundario: #90A4AE;
+
+  
+  --fuente-titulos: 'Montserrat', sans-serif;  /* tipografia para titulos y destacados */
+  --fuente-texto: 'Inter', sans-serif; /* tipografia para cuerpo de textos */
+}

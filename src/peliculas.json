@@ -1,0 +1,163 @@
+
+[
+  {
+    "id": 1,
+    "titulo": "Inception",
+    "anio": 2010,
+    "genero": "Ciencia ficción",
+    "calificacion": 8.8,
+    "imagen": "https://placehold.co/300x450?text=Inception"
+  },
+  {
+    "id": 2,
+    "titulo": "Interstellar",
+    "anio": 2014,
+    "genero": "Ciencia ficción",
+    "calificacion": 8.7,
+    "imagen": "https://placehold.co/300x450?text=Interstellar"
+  },
+  {
+    "id": 3,
+    "titulo": "The Dark Knight",
+    "anio": 2008,
+    "genero": "Acción",
+    "calificacion": 9.0,
+    "imagen": "https://placehold.co/300x450?text=The+Dark+Knight"
+  },
+  {
+    "id": 4,
+    "titulo": "Titanic",
+    "anio": 1997,
+    "genero": "Romance",
+    "calificacion": 7.9,
+    "imagen": "https://placehold.co/300x450?text=Titanic"
+  },
+  {
+    "id": 5,
+    "titulo": "Avatar",
+    "anio": 2009,
+    "genero": "Ciencia ficción",
+    "calificacion": 7.9,
+    "imagen": "https://placehold.co/300x450?text=Avatar"
+  },
+  {
+    "id": 6,
+    "titulo": "The Matrix",
+    "anio": 1999,
+    "genero": "Ciencia ficción",
+    "calificacion": 8.7,
+    "imagen": "https://placehold.co/300x450?text=The+Matrix"
+  },
+  {
+    "id": 7,
+    "titulo": "Gladiator",
+    "anio": 2000,
+    "genero": "Acción",
+    "calificacion": 8.5,
+    "imagen": "https://placehold.co/300x450?text=Gladiator"
+  },
+  {
+    "id": 8,
+    "titulo": "Forrest Gump",
+    "anio": 1994,
+    "genero": "Drama",
+    "calificacion": 8.8,
+    "imagen": "https://placehold.co/300x450?text=Forrest+Gump"
+  },
+  {
+    "id": 9,
+    "titulo": "Pulp Fiction",
+    "anio": 1994,
+    "genero": "Crimen",
+    "calificacion": 8.9,
+    "imagen": "https://placehold.co/300x450?text=Pulp+Fiction"
+  },
+  {
+    "id": 10,
+    "titulo": "The Godfather",
+    "anio": 1972,
+    "genero": "Crimen",
+    "calificacion": 9.2,
+    "imagen": "https://placehold.co/300x450?text=The+Godfather"
+  },
+  {
+    "id": 11,
+    "titulo": "Joker",
+    "anio": 2019,
+    "genero": "Drama",
+    "calificacion": 8.4,
+    "imagen": "https://placehold.co/300x450?text=Joker"
+  },
+  {
+    "id": 12,
+    "titulo": "Parasite",
+    "anio": 2019,
+    "genero": "Suspenso",
+    "calificacion": 8.5,
+    "imagen": "https://placehold.co/300x450?text=Parasite"
+  },
+  {
+    "id": 13,
+    "titulo": "Whiplash",
+    "anio": 2014,
+    "genero": "Drama",
+    "calificacion": 8.5,
+    "imagen": "https://placehold.co/300x450?text=Whiplash"
+  },
+  {
+    "id": 14,
+    "titulo": "Coco",
+    "anio": 2017,
+    "genero": "Animación",
+    "calificacion": 8.4,
+    "imagen": "https://placehold.co/300x450?text=Coco"
+  },
+  {
+    "id": 15,
+    "titulo": "Toy Story",
+    "anio": 1995,
+    "genero": "Animación",
+    "calificacion": 8.3,
+    "imagen": "https://placehold.co/300x450?text=Toy+Story"
+  },
+  {
+    "id": 16,
+    "titulo": "Finding Nemo",
+    "anio": 2003,
+    "genero": "Animación",
+    "calificacion": 8.2,
+    "imagen": "https://placehold.co/300x450?text=Finding+Nemo"
+  },
+  {
+    "id": 17,
+    "titulo": "The Avengers",
+    "anio": 2012,
+    "genero": "Acción",
+    "calificacion": 8.0,
+    "imagen": "https://placehold.co/300x450?text=The+Avengers"
+  },
+  {
+    "id": 18,
+    "titulo": "Jurassic Park",
+    "anio": 1993,
+    "genero": "Aventura",
+    "calificacion": 8.2,
+    "imagen": "https://placehold.co/300x450?text=Jurassic+Park"
+  },
+  {
+    "id": 19,
+    "titulo": "Back to the Future",
+    "anio": 1985,
+    "genero": "Aventura",
+    "calificacion": 8.5,
+    "imagen": "https://placehold.co/300x450?text=Back+to+the+Future"
+  },
+  {
+    "id": 20,
+    "titulo": "Shrek",
+    "anio": 2001,
+    "genero": "Animación",
+    "calificacion": 7.9,
+    "imagen": "https://placehold.co/300x450?text=Shrek"
+  }
+]
