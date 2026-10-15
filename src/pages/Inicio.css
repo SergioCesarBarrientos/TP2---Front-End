@@ -1,3 +1,4 @@
+
 .marca-superior {
   width: 100%;
   padding: 15px 20px;
@@ -31,10 +32,12 @@
   min-height: 400px;
   padding: 55px 6%;
   overflow: hidden;
-  background: linear-gradient(120deg,
-      var(--color-primario-suave),
-      #ffffff 60%,
-      #e8f5e9);
+  background: linear-gradient(
+    120deg,
+    var(--color-primario-suave),
+    #ffffff 60%,
+    #e8f5e9
+  );
 }
 
 .banner-contenido {
@@ -42,7 +45,6 @@
   z-index: 2;
   max-width: 650px;
 }
-
 
 .banner-contenido h1 {
   margin: 0 0 20px;
@@ -151,12 +153,14 @@
 
 .equipo-seccion {
   width: 100%;
-  padding: 60px 3%;
+  padding: 50px 4%;
+  box-sizing: border-box;
   scroll-margin-top: 24px;
 }
 
 .equipo-encabezado {
-  margin-bottom: 30px;
+  max-width: 950px;
+  margin: 0 auto 30px;
 }
 
 .seccion-etiqueta {
@@ -183,20 +187,30 @@
   line-height: 1.6;
 }
 
+/* TARJETAS */
+
 .equipo-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 24px;
   width: 100%;
-  max-width: 1050px;
+  max-width: 950px;
   margin: 0 auto;
 }
 
 .equipo-card {
   grid-column: span 2;
   min-width: 0;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgb(38 50 56 / 7%);
   cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+/* Centrar las dos tarjetas de la segunda fila */
 
 .equipo-card:nth-child(4) {
   grid-column: 2 / span 2;
@@ -206,34 +220,42 @@
   grid-column: 4 / span 2;
 }
 
-
 /* FOTOS */
 
+/* Todos conservan el mismo contenedor.
+   Si no hay foto, no se dibuja ningún marco vacío. */
+
 .foto-contenedor {
-  display: grid;
+  display: flex;
   height: 145px;
   padding: 16px;
-  place-items: center;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
   background: #f1f6f9;
   transition: background 0.25s ease;
 }
 
 .foto-placeholder {
-  display: grid;
-  width: 85px;
-  height: 85px;
-  place-items: center;
-  border: 2px dashed #b0bec5;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: none;
   border-radius: 50%;
-  background: #ffffff;
-  color: var(--color-texto-secundario);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
+  object-fit: cover;
+  object-position: center;
 }
 
+/* Oculta el contenedor visual cuando todavía no hay foto */
+
+.foto-contenedor:has(div.foto-placeholder) {
+  display: none;
+}
+
+/* CONTENIDO DE LAS TARJETAS */
+
 .card-contenido {
-  padding: 18px 0;
+  padding: 18px 14px;
   text-align: center;
 }
 
@@ -288,10 +310,10 @@
   line-height: 1;
 }
 
-
+/* BOTÓN DE PERFIL */
 
 .perfil-boton {
-  width: 30%;
+  width: 75%;
   padding: 10px 8px;
   border: 1px solid var(--color-primario);
   border-radius: 7px;
@@ -309,14 +331,14 @@
   color: #ffffff;
 }
 
-/* ILUMINACIÓN VERDE Y AZUL AL SELECCIONAR */
+/* EFECTOS AL SELECCIONAR UNA TARJETA */
 
 .equipo-card.card-seleccionada {
   transform: translateY(-4px);
 }
 
 .equipo-card.card-seleccionada.color-verde {
-  border: 2px solid var(--color-secundario);
+  border-color: var(--color-secundario);
   box-shadow:
     0 0 0 3px rgb(46 125 50 / 12%),
     0 0 22px rgb(46 125 50 / 25%);
@@ -333,7 +355,7 @@
 }
 
 .equipo-card.card-seleccionada.color-azul {
-  border: 2px solid var(--color-primario);
+  border-color: var(--color-primario);
   box-shadow:
     0 0 0 3px rgb(25 118 210 / 12%),
     0 0 22px rgb(25 118 210 / 25%);

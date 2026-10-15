@@ -1,15 +1,19 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import "./inicio.css";
+import sergioFoto from "../assets/img/sergio.png";
 
 const integrantes = [
   {
     id: 1,
     nombre: "Sergio Cesar Barrientos",
     puesto: "Desarrollador Frontend",
+    foto: sergioFoto,
     linkedin: "https://www.linkedin.com/",
     github: "https://github.com/SergioCesarBarrientos",
+    ruta: "/Equipo/sergio-cesar-barrientos",
   },
   {
     id: 2,
@@ -17,6 +21,7 @@ const integrantes = [
     puesto: "Desarrollador Frontend",
     linkedin: "https://www.linkedin.com/",
     github: "https://github.com/",
+    ruta: "/Equipo/persona-2",
   },
   {
     id: 3,
@@ -24,6 +29,7 @@ const integrantes = [
     puesto: "Desarrollador Frontend",
     linkedin: "https://www.linkedin.com/",
     github: "https://github.com/",
+    ruta: "/Equipo/persona-3",
   },
   {
     id: 4,
@@ -31,6 +37,7 @@ const integrantes = [
     puesto: "Desarrollador Frontend",
     linkedin: "https://www.linkedin.com/",
     github: "https://github.com/",
+    ruta: "/Equipo/persona-4",
   },
   {
     id: 5,
@@ -38,11 +45,13 @@ const integrantes = [
     puesto: "Desarrollador Frontend",
     linkedin: "https://www.linkedin.com/",
     github: "https://github.com/",
+    ruta: "/Equipo/persona-5",
   },
 ];
 
 function Inicio() {
   const [tarjetaActiva, setTarjetaActiva] = useState(null);
+  const navigate = useNavigate();
 
   const irAEquipo = () => {
     document
@@ -51,13 +60,14 @@ function Inicio() {
   };
 
   const verPerfil = (integrante) => {
-    console.log("Ver perfil de:", integrante.nombre);
-  };
+  navigate(integrante.ruta);
+  window.scrollTo(0, 0);
+};
 
   return (
     <main className="home">
       <header className="marca-superior">
-         IFTS<span>29</span>
+        IFTS<span>29</span>
       </header>
 
       <section className="home-banner">
@@ -68,7 +78,8 @@ function Inicio() {
 
           <p>
             Somos el equipo TechArg y desarrollamos esta
-            pagina de peliculas para esta segunda entrega de la materia DSWF de IFTS 29.
+            página de películas para esta segunda entrega
+            de la materia DSWF de IFTS 29.
           </p>
 
           <button className="banner-boton" onClick={irAEquipo}>
@@ -93,8 +104,7 @@ function Inicio() {
             </span>
 
             <h2>Nuestro equipo</h2>
-
-            <p>Visita los perfiles del equipo TechArg.</p>
+            <p>Visitá los perfiles del equipo TechArg.</p>
           </div>
         </div>
 
@@ -114,15 +124,25 @@ function Inicio() {
                     : ""
                 }`}
                 onClick={() =>
-                  setTarjetaActiva(activa ? null : integrante.id)
+                  setTarjetaActiva(
+                    activa ? null : integrante.id
+                  )
                 }
               >
                 <div className="foto-contenedor">
-                  <div
-                    className="foto-placeholder"
-                    role="img"
-                    aria-label={`Foto de ${integrante.nombre}`}
-                  />
+                  {integrante.foto ? (
+                    <img
+                      src={integrante.foto}
+                      alt={`Foto de ${integrante.nombre}`}
+                      className="foto-placeholder"
+                    />
+                  ) : (
+                    <div
+                      className="foto-placeholder"
+                      role="img"
+                      aria-label={`Foto pendiente de ${integrante.nombre}`}
+                    />
+                  )}
                 </div>
 
                 <div className="card-contenido">
