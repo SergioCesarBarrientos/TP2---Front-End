@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Sidebar from "./components/SideBar";
 import Inicio from "./pages/Inicio";
-import Equipo from "./pages/Equipo";
+import Integrante from './pages/Integrante';
 import PeliculasAPI from "./pages/PeliculasAPI"
 import PeliculasJson from "./pages/PeliculasJson"
 import Footer from "./components/Footer";
@@ -18,7 +18,7 @@ function App() {
           <main className="app-pagina">
             <Routes>
               <Route path="/" element={<Inicio />} />
-              <Route path="/Equipo" element= {<Equipo /> } />
+              <Route path="/Equipo/:id" element={<Integrante />} />
               <Route path="/PeliculasAPI" element= {<PeliculasAPI /> } />
               <Route path="/PeliculasJson" element={ <PeliculasJson />} />
               {/* Acá agregar las demás páginas */}

@@ -1,0 +1,467 @@
+
+.integrante-header {
+    width: 100%;
+    padding: 15px 32px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--color-texto-principal);
+    font-family: var(--fuente-titulos);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.integrante-header span {
+    color: var(--color-secundario);
+}
+
+/* ========================================
+   CONTENEDOR GENERAL
+======================================== */
+
+.integrante-page {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 32px 40px;
+    box-sizing: border-box;
+    color: var(--color-texto-principal);
+    font-family: var(--fuente-texto);
+}
+
+/* ========================================
+   PRESENTACIÓN PRINCIPAL
+======================================== */
+
+.integrante-page .integrante-presentacion {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid #eceff1;
+    border-radius: 16px;
+    background-color: var(--color-fondos);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+
+}
+
+
+/* ========================================
+   FOTO DE PERFIL
+======================================== */
+
+.integrante-page .integrante-foto-contenedor {
+    width: 210px;
+    flex: 0 0 210px;
+    cursor: pointer;
+}
+
+.integrante-page .integrante-foto {
+    display: block;
+    width: 210px;
+    height: 245px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    background-color: var(--color-primario-suave);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.integrante-page .integrante-foto:hover {
+    transform: scale(1.025);
+    box-shadow: 0 0 18px color-mix(
+        in srgb,
+        var(--color-secundario) 30%,
+        transparent
+    );
+}
+
+.integrante-page .integrante-foto-vacia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 245px;
+    box-sizing: border-box;
+    border: 1px dashed var(--color-secundario);
+    border-radius: 12px;
+    background-color: var(--color-primario-suave);
+    color: var(--color-texto-secundario);
+    font-size: 13px;
+    text-align: center;
+}
+
+/* ========================================
+   DATOS PERSONALES
+======================================== */
+
+.integrante-page .integrante-datos {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.integrante-page .integrante-etiqueta {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--color-secundario);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.integrante-page .integrante-datos h1 {
+    margin: 0;
+    font-family: var(--fuente-titulos);
+    font-size: 30px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.integrante-page .integrante-rol {
+    margin: 10px 0;
+    color: var(--color-secundario);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.integrante-page .integrante-detalles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+}
+
+.integrante-page .integrante-detalles p {
+    margin: 0;
+    color: var(--color-texto-secundario);
+    font-size: 13px;
+}
+
+.integrante-page .integrante-detalles strong {
+    color: var(--color-texto-principal);
+}
+
+.integrante-page .integrante-descripcion {
+    width: 100%;
+    margin: 14px 0;
+    color: var(--color-texto-secundario);
+    font-size: 14px;
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+/* ========================================
+   REDES SOCIALES
+   Clase icono-red para LinkedIn y GitHub
+======================================== */
+
+.integrante-page .integrante-redes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-top: 18px;
+}
+
+.integrante-page .icono-red {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-secundario);
+    border-radius: 12px;
+    color: var(--color-secundario);
+    background-color: var(--color-fondos);
+    text-decoration: none;
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.integrante-page .icono-red:hover {
+    transform: translateY(-4px) scale(1.06);
+    color: var(--color-fondos);
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 18px color-mix(
+        in srgb,
+        var(--color-secundario) 40%,
+        transparent
+    );
+}
+
+/* ========================================
+   SECCIÓN SOBRE MÍ
+======================================== */
+
+.integrante-page .integrante-seccion {
+    width: 70%;
+    margin: 28px auto 0;
+    padding: 26px;
+    box-sizing: border-box;
+    border: 1px solid #eceff1;
+    border-radius: 16px;
+    background-color: var(--color-fondos);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+        cursor: pointer;
+}
+
+.integrante-page .integrante-seccion:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-secundario);
+    box-shadow:
+        0 0 18px color-mix(
+            in srgb,
+            var(--color-secundario) 15%,
+            transparent
+        ),
+        0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.integrante-page .integrante-seccion > h2 {
+    margin: 0 0 24px;
+    font-family: var(--fuente-titulos);
+    font-size: 23px;
+}
+
+/* ========================================
+   FILAS DE INFORMACIÓN
+======================================== */
+
+.integrante-page .integrante-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.integrante-page .integrante-info:last-child {
+    margin-bottom: 0;
+}
+
+.integrante-page .integrante-info-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: var(--color-primario-suave);
+    color: var(--color-secundario);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.integrante-page .integrante-info:hover .integrante-info-icono {
+    transform: scale(1.08);
+    box-shadow: 0 0 14px color-mix(
+        in srgb,
+        var(--color-secundario) 25%,
+        transparent
+    );
+}
+
+.integrante-page .integrante-info-contenido {
+    min-width: 0;
+    flex: 1;
+}
+
+.integrante-page .integrante-info h3 {
+    margin: 0 0 8px;
+    font-family: var(--fuente-titulos);
+    font-size: 15px;
+}
+
+.integrante-page .integrante-info p {
+    margin: 0;
+    color: var(--color-texto-secundario);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ========================================
+   ETIQUETAS DE TECNOLOGÍAS E INTERESES
+======================================== */
+
+.integrante-page .integrante-etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.integrante-page .integrante-chip {
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: var(--color-primario-suave);
+    color: var(--color-secundario);
+    font-size: 12px;
+    font-weight: 600;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.integrante-page .integrante-chip:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 12px color-mix(
+        in srgb,
+        var(--color-secundario) 20%,
+        transparent
+    );
+}
+
+/* ========================================
+   PELÍCULAS Y MÚSICA FAVORITAS
+   Tarjetas apiladas verticalmente
+======================================== */
+
+.integrante-page .integrante-favoritos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+    margin: 24px auto 0;
+    cursor: pointer;
+}
+
+.integrante-page .integrante-favorito-card {
+    position: relative;
+    isolation: isolate;
+    min-width: 0;
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    border: 1px solid #eceff1;
+    border-radius: 16px;
+    background-color: var(--color-fondos);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Halo detrás de las tarjetas */
+
+.integrante-page .integrante-favorito-card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -2px;
+    border-radius: inherit;
+    background: var(--color-secundario);
+    opacity: 0;
+    filter: blur(18px);
+    transition: opacity 0.3s ease;
+}
+
+.integrante-page .integrante-favorito-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    border-color: var(--color-secundario);
+    box-shadow:
+        0 0 18px color-mix(
+            in srgb,
+            var(--color-secundario) 20%,
+            transparent
+        ),
+        0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.integrante-page .integrante-favorito-card:hover::before {
+    opacity: 0.18;
+}
+
+/* ========================================
+   TÍTULOS DE LAS TARJETAS
+======================================== */
+
+.integrante-page .integrante-favorito-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-secundario);
+}
+
+.integrante-page .integrante-favorito-titulo h2 {
+    margin: 0;
+    color: var(--color-texto-principal);
+    font-family: var(--fuente-titulos);
+    font-size: 17px;
+}
+
+/* ========================================
+   LISTAS DE PELÍCULAS Y MÚSICA
+======================================== */
+
+.integrante-page .integrante-favorito-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0 0;
+    padding-left: 20px;
+    color: var(--color-texto-secundario);
+    font-size: 14px;
+}
+
+.integrante-page .integrante-lista-peliculas li,
+.integrante-page .integrante-lista-musica li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 8px 0;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.integrante-page .integrante-lista-peliculas li strong,
+.integrante-page .integrante-lista-musica li strong {
+    color: var(--color-texto-principal);
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.integrante-page .integrante-lista-peliculas li span,
+.integrante-page .integrante-lista-musica li span {
+    color: var(--color-texto-secundario);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.integrante-page .integrante-lista-peliculas li:hover,
+.integrante-page .integrante-lista-musica li:hover {
+    transform: translateX(4px);
+}
+
+.integrante-page .integrante-lista-peliculas li:hover strong,
+.integrante-page .integrante-lista-musica li:hover strong {
+    color: var(--color-secundario);
+}

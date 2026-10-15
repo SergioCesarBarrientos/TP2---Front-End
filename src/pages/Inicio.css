@@ -233,7 +233,7 @@
 }
 
 .card-contenido {
-  padding: 18px 12px;
+  padding: 18px 0;
   text-align: center;
 }
 
@@ -288,10 +288,10 @@
   line-height: 1;
 }
 
-/* BOTÓN SIN FLECHA */
+
 
 .perfil-boton {
-  width: 100%;
+  width: 30%;
   padding: 10px 8px;
   border: 1px solid var(--color-primario);
   border-radius: 7px;
