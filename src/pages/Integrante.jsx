@@ -53,8 +53,8 @@ function Integrante() {
             descripcion:
                 'Integrante del Equipo 32, participando en el desarrollo de TechArg.',
             foto: '',
-            linkedin: '',
-            github: '',
+             linkedin: 'https://www.linkedin.com',
+            github: 'https://github.com',
             estudios: 'Estudiante de IFTS 29',
             tecnologias: ['HTML', 'CSS', 'JavaScript', 'React'],
             intereses: ['Programación', 'Tecnología'],
@@ -70,8 +70,8 @@ function Integrante() {
             descripcion:
                 'Integrante del Equipo 32, participando en el desarrollo de TechArg.',
             foto: '',
-            linkedin: '',
-            github: '',
+              linkedin: 'https://www.linkedin.com',
+            github: 'https://github.com',
             estudios: 'Estudiante de IFTS 29',
             tecnologias: ['HTML', 'CSS', 'JavaScript', 'React'],
             intereses: ['Programación', 'Diseño web'],
@@ -87,8 +87,8 @@ function Integrante() {
             descripcion:
                 'Integrante del Equipo 32, participando en el desarrollo de TechArg.',
             foto: '',
-            linkedin: '',
-            github: '',
+             linkedin: 'https://www.linkedin.com',
+            github: 'https://github.com',
             estudios: 'Estudiante de IFTS 29',
             tecnologias: ['HTML', 'CSS', 'JavaScript', 'React'],
             intereses: ['Tecnología', 'Desarrollo web'],
@@ -104,8 +104,8 @@ function Integrante() {
             descripcion:
                 'Integrante del Equipo 32, participando en el desarrollo de TechArg.',
             foto: '',
-            linkedin: '',
-            github: '',
+             linkedin: 'https://www.linkedin.com',
+            github: 'https://github.com',
             estudios: 'Estudiante de IFTS 29',
             tecnologias: ['HTML', 'CSS', 'JavaScript', 'React'],
             intereses: ['Programación', 'Tecnología'],
