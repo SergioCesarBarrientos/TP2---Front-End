@@ -15,7 +15,9 @@ function SideBar() {
       name: 'Sergio Cesar Barrientos',
       path: '/Equipo/sergio-cesar-barrientos',
     },
-    { name: 'Persona 2', path: '/Equipo/persona-2' },
+    { name: 'Mariana Sosa', 
+      path: '/Equipo/Mariana Sosa'
+     },
     { name: 'Persona 3', path: '/Equipo/persona-3' },
     { name: 'Persona 4', path: '/Equipo/persona-4' },
     { name: 'Persona 5', path: '/Equipo/persona-5' },
