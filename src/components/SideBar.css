@@ -184,3 +184,105 @@
   font-size: 11px;
   font-weight: 600;
 }
+
+
+
+/* El botón hamburguesa no aparece en PC */
+.sidebar-toggle {
+  display: none;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+/* ==============================
+   TABLET Y CELULAR
+   ============================== */
+
+@media (max-width: 900px) {
+
+  .sidebar-toggle {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 1002;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 10px;
+    background: var(--color-secundario);
+    color: white;
+
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1001;
+
+    width: 260px;
+    height: 100vh;
+    min-height: 0;
+
+    overflow-y: auto;
+    box-shadow: 4px 0 18px rgb(0 0 0 / 10%);
+
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition:
+      transform 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  .sidebar.sidebar-open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .sidebar-overlay.sidebar-overlay-visible {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+  }
+}
+
+/* ==============================
+   AJUSTES PARA CELULARES
+   ============================== */
+
+@media (max-width: 600px) {
+
+  .sidebar {
+    width: min(280px, 85vw);
+    padding: 20px 14px;
+  }
+
+  .sidebar-brand {
+    margin-top: 48px;
+  }
+
+  .sidebar-title {
+    font-size: 19px;
+  }
+
+  .sidebar-link {
+    padding: 12px;
+  }
+
+  .sidebar-sublink {
+    padding: 10px 8px;
+  }
+}

@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import "./inicio.css";
+import portada from '../assets/img/portada.png';
 import sergioFoto from "../assets/img/sergio.png";
 import marianaFoto from "../assets/img/mariana.jpg";
+
 const integrantes = [
   {
     id: 1,
@@ -15,7 +17,7 @@ const integrantes = [
     github: "https://github.com/SergioCesarBarrientos",
     ruta: "/Equipo/sergio-cesar-barrientos",
   },
-  {
+ {
     id: 2,
     nombre: "Mariana Sosa",
     puesto: "Desarrolladora Frontend",
@@ -61,9 +63,9 @@ function Inicio() {
   };
 
   const verPerfil = (integrante) => {
-  navigate(integrante.ruta);
-  window.scrollTo(0, 0);
-};
+    navigate(integrante.ruta);
+    window.scrollTo(0, 0);
+  };
 
   return (
     <main className="home">
@@ -89,12 +91,7 @@ function Inicio() {
           </button>
         </div>
 
-        <div className="banner-decoracion" aria-hidden="true">
-          <div className="banner-circulo circulo-uno" />
-          <div className="banner-circulo circulo-dos" />
-          <div className="banner-circulo circulo-tres" />
-          <div className="banner-codigo">&lt;/&gt;</div>
-        </div>
+
       </section>
 
       <section className="equipo-seccion" id="equipo">
@@ -119,11 +116,10 @@ function Inicio() {
             return (
               <article
                 key={integrante.id}
-                className={`equipo-card ${
-                  activa
+                className={`equipo-card ${activa
                     ? `card-seleccionada ${colorSeleccion}`
                     : ""
-                }`}
+                  }`}
                 onClick={() =>
                   setTarjetaActiva(
                     activa ? null : integrante.id
