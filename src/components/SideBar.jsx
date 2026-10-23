@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { UserRoundGroup, House, Film, Database, GitBranch, BookOpen, ChevronDown, Menu, X,} from 'lucide-react';
-import './Sidebar.css';
+import './SideBar.css';
 import logo from '../assets/img/ifts.png';
 
 function SideBar() {
