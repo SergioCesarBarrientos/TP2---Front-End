@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import "./inicio.css";
+import "./Inicio.css";
 import portada from '../assets/img/portada.png';
 import sergioFoto from "../assets/img/sergio.png";
 import marianaFoto from "../assets/img/mariana.jpg";
