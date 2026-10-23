@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import "./inicio.css";
 import sergioFoto from "../assets/img/sergio.png";
-
+import marianaFoto from "../assets/img/mariana.jpg";
 const integrantes = [
   {
     id: 1,
@@ -17,11 +17,12 @@ const integrantes = [
   },
   {
     id: 2,
-    nombre: "Persona 2",
-    puesto: "Desarrollador Frontend",
-    linkedin: "https://www.linkedin.com/",
-    github: "https://github.com/",
-    ruta: "/Equipo/persona-2",
+    nombre: "Mariana Sosa",
+    puesto: "Desarrolladora Frontend",
+    foto: marianaFoto,
+    linkedin: "www.linkedin.com/in/mariana-sosa-0b2378185",
+    github: "https://github.com/MaruSosa",
+    ruta: "/Equipo/mariana-sosa",
   },
   {
     id: 3,

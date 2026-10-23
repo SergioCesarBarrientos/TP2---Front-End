@@ -10,6 +10,7 @@ import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import './Integrante.css';
 
 import sergioFoto from '../assets/img/sergio.png';
+import marianaFoto from '../assets/img/mariana.jpg';
 
 function Integrante() {
     const { id } = useParams();
@@ -45,21 +46,30 @@ function Integrante() {
             ],
         },
 
-        'persona-2': {
-            nombre: 'Persona 2',
-            rol: 'Estudiante y desarrollador web',
-            ciudad: '',
-            edad: null,
+        'mariana-sosa': {
+            nombre: 'Mariana Sosa',
+            rol: 'Estudiante de Ingeniería en Sistemas y Desarrollo de Software',
+            ciudad: 'Aguilares-Tucumán',
+            edad: 36,
             descripcion:
-                'Integrante del Equipo 32, participando en el desarrollo de TechArg.',
-            foto: '',
-             linkedin: 'https://www.linkedin.com',
-            github: 'https://github.com',
-            estudios: 'Estudiante de IFTS 29',
-            tecnologias: ['HTML', 'CSS', 'JavaScript', 'React'],
-            intereses: ['Programación', 'Tecnología'],
-            peliculas: [],
-            musica: [],
+                'Soy estudiante de Ingeniería en Sistemas y Desarrollo de Software. Me apasiona la programación, el desarrollo web y la creación de soluciones tecnológicas, combinando la lógica del código con el diseño.',
+            foto: marianaFoto,
+             linkedin: 'www.linkedin.com/in/mariana-sosa-0b2378185',
+            github: 'https://github.com/MaruSosa',
+            estudios: 'Ingeniería en Sistemas y Desarrollo de Software',
+            tecnologias: ['JavaScript', 'C#', 'Node.js', 'Express', 'HTML', 'CSS', 'MySQL', 'Git'],
+            intereses: ['Desarrollo Web', 'Programación', 'Diseño de Interfaces', 'Bases de datos'],
+            peliculas: [
+                { titulo: 'Psicosis', anio: 1960, director: 'Alfred Hitchcock' },
+                { titulo: 'Troya', anio: 2004, director: 'Wolfgang Petersen' },
+                { titulo: 'Coco', anio: 2017, director: 'Lee Unkrich y Adrián Molina' },
+            ],
+            musica: [
+                { titulo: 'November Rain', artista: 'Guns N Roses' },
+                { titulo: 'Knockin On Heavens Door', artista: 'Guns N Roses' },
+                { titulo: 'Flowers', artista: 'Miley Cyrus' },
+                { titulo: 'Seguir viviendo sin tu amor', artista: 'Luis Alberto Spinetta' },
+            ],
         },
 
         'persona-3': {
