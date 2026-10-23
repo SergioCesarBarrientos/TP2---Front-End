@@ -48,7 +48,7 @@ function SideBar() {
         <p className="sidebar-subtitle">Equipo 32 - 2B</p>
       </div>
 
-      <nav className="sidebar-nav">
+     <nav className="sidebar-nav">
         {/* Inicio */}
         <NavLink
           to="/"
@@ -73,9 +73,7 @@ function SideBar() {
             aria-controls="sidebar-team-submenu"
           >
             <UserRoundGroup size={20} strokeWidth={1.8} />
-
             <span>Equipo</span>
-
             <ChevronDown
               size={16}
               className={`sidebar-chevron ${
@@ -85,36 +83,57 @@ function SideBar() {
           </button>
 
           {equipoAbierto && (
-            <div className="sidebar-submenu" id="sidebar-team-submenu" >
-
-              {/* Integrantes individuales */}
+            <div className="sidebar-submenu" id="sidebar-team-submenu">
               {integrantes.map((persona) => (
-                <NavLink  key={persona.path} to={persona.path} className={({ isActive }) =>
-                    `sidebar-sublink ${ isActive ? 'active' : '' }`}> {persona.name}
+                <NavLink  
+                  key={persona.path} 
+                  to={persona.path} 
+                  className={({ isActive }) =>
+                    `sidebar-sublink ${ isActive ? 'active' : '' }`
+                  }
+                >
+                  {persona.name}
                 </NavLink>
               ))}
             </div>
           )}
         </div>
 
-        {/* Resto del menú */}
-        {menuItems.slice(1).map((item) => {
-          const Icon = item.icon;
+        {/* Películas API */}
+        <NavLink 
+          to="/PeliculasAPI" 
+          className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}
+        >
+          <Film size={20} strokeWidth={1.8} />
+          <span>Películas API</span>
+        </NavLink>
 
-          return (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              end={item.path === '/'}
-              className={({ isActive }) =>
-                `sidebar-link ${isActive ? 'active' : ''}`
-              }
-            >
-              <Icon size={20} strokeWidth={1.8} />
-              <span>{item.name}</span>
-            </NavLink>
-          );
-        })}
+        {/* Películas JSON */}
+        <NavLink 
+          to="/PeliculasJson" 
+          className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}
+        >
+          <Database size={20} strokeWidth={1.8} />
+          <span>Películas JSON</span>
+        </NavLink>
+
+        {/* Árbol */}
+        <NavLink 
+          to="/Arbol" 
+          className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}
+        >
+          <GitBranch size={20} strokeWidth={1.8} />
+          <span>Árbol</span>
+        </NavLink>
+
+        {/* Bitácora */}
+        <NavLink 
+          to="/Bitacora" 
+          className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}
+        >
+          <BookOpen size={20} strokeWidth={1.8} />
+          <span>Bitácora</span>
+        </NavLink>
       </nav>
 
       <div className="sidebar-footer">

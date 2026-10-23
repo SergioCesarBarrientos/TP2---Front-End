@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Arbol.css'; // O podés integrarlo en tus estilos globales
+import './Arbol.css';
 
 function NodoComponente({ nombre, tipo, descripcion, children }) {
   const [abierto, setAbierto] = useState(true);

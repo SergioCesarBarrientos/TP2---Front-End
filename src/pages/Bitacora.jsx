@@ -1,5 +1,5 @@
 import React from 'react';
-import './Bitacora.css'; // O usar estilos alineados
+
 
 const registrosBitacora = [
   {
