@@ -11,7 +11,7 @@
   font-family: var(--fuente-titulos);
   color: var(--color-texto-principal);
   margin-bottom: 8px;
-  fontSize: 1.8rem;
+  font-size: 1.8rem; 
 }
 
 .arbol-page > p {
