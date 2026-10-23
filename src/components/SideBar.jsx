@@ -16,7 +16,7 @@ function SideBar() {
       path: '/Equipo/sergio-cesar-barrientos',
     },
     { name: 'Mariana Sosa', 
-      path: '/Equipo/Mariana Sosa'
+      path: '/Equipo/mariana-sosa'
      },
     { name: 'Persona 3', path: '/Equipo/persona-3' },
     { name: 'Persona 4', path: '/Equipo/persona-4' },
