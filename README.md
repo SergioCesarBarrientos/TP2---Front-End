@@ -54,7 +54,7 @@ Contiene:
 | Mariana Sosa | [@MaruSosa](https://github.com/MaruSosa) | ⚠️ COMPLETAR |
 | Carolina Silva Cotto | [@csilvacotto-2202](https://github.com/csilvacotto-2202) | Perfil propio (datos, foto, tarjeta de portada y entrada en la sidebar) y configuración de `vercel.json` para el deploy, y redacción del README. |
 | Karina Sánchez | [@karinaluciasanz](https://github.com/karinaluciasanz) | ⚠️ COMPLETAR |
-| Miguel Marcaida | [@Miguel-Marcaida](https://github.com/Miguel-Marcaida) | ⚠️ COMPLETAR |
+| Miguel Marcaida | [@Miguel-Marcaida](https://github.com/Miguel-Marcaida) | Perfil propio (tarjeta, ruta dinámica y datos), conexión de rutas de pages y ajustes de estilos en la portada y perfiles. |
 
 ## Uso de IA
 
@@ -66,7 +66,7 @@ Declaramos las aplicaciones y los modelos de IA que usamos. Distinguimos la **ap
 | Sergio Cesar Barrientos | ⚠️ COMPLETAR | ⚠️ COMPLETAR | ⚠️ COMPLETAR |
 | Mariana Sosa | ⚠️ COMPLETAR | ⚠️ COMPLETAR | ⚠️ COMPLETAR |
 | Karina Sánchez | ⚠️ COMPLETAR | ⚠️ COMPLETAR | ⚠️ COMPLETAR |
-| Miguel Marcaida | ⚠️ COMPLETAR | ⚠️ COMPLETAR | ⚠️ COMPLETAR |
+| Miguel Marcaida | DeepSeek (chat.deepseek.com) | DeepSeek-V3 | Asistencia en la resolución de conflictos de Git, creación y diseño de la tarjeta de perfil, conexión de rutas y ajustes de CSS responsivo. |
 
 Todo lo generado con IA fue revisado, adaptado y probado por el equipo.
 
