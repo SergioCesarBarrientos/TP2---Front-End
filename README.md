@@ -38,7 +38,7 @@ Contiene:
 - **Portada:** presentación del equipo y acceso a los perfiles de cada integrante.
 - **Perfiles:** una página por integrante con su formación, tecnologías, intereses, películas y música favoritas.
 - **Películas (JSON local):** catálogo de 20 películas con búsqueda por título y filtro por género.
-- **Películas (API pública):** listado obtenido de una API pública, con mensajes de carga y de error.
+- **Películas (API pública):** listado obtenido de una API pública, con mensajes de carga y de error. Desarrollo de la lógica de conexión con la API pública de TVMaze utilizando fetch y useEffect, implementando búsqueda por título con estado de carga y manejo de errores.
 - **Árbol de renderizado:** jerarquía de componentes de la aplicación.
 - **Bitácora:** registro del proceso de trabajo del equipo.
 
@@ -54,7 +54,7 @@ Contiene:
 | Mariana Sosa | [@MaruSosa](https://github.com/MaruSosa) | ⚠️ COMPLETAR |
 | Carolina Silva Cotto | [@csilvacotto-2202](https://github.com/csilvacotto-2202) | Perfil propio (datos, foto, tarjeta de portada y entrada en la sidebar) y configuración de `vercel.json` para el deploy, y redacción del README. |
 | Karina Sánchez | [@karinaluciasanz](https://github.com/karinaluciasanz) | ⚠️ COMPLETAR |
-| Miguel Marcaida | [@Miguel-Marcaida](https://github.com/Miguel-Marcaida) | ⚠️ COMPLETAR |
+| Miguel Marcaida | [@Miguel-Marcaida](https://github.com/Miguel-Marcaida) | Perfil propio (tarjeta, ruta dinámica y datos), implementación de la API de Películas (`fetch`, `useEffect`, estados de carga y error, búsqueda por texto), conexión de rutas y ajustes de estilos. |
 
 ## Uso de IA
 
@@ -66,7 +66,7 @@ Declaramos las aplicaciones y los modelos de IA que usamos. Distinguimos la **ap
 | Sergio Cesar Barrientos | ⚠️ COMPLETAR | ⚠️ COMPLETAR | ⚠️ COMPLETAR |
 | Mariana Sosa | ⚠️ COMPLETAR | ⚠️ COMPLETAR | ⚠️ COMPLETAR |
 | Karina Sánchez | ⚠️ COMPLETAR | ⚠️ COMPLETAR | ⚠️ COMPLETAR |
-| Miguel Marcaida | ⚠️ COMPLETAR | ⚠️ COMPLETAR | ⚠️ COMPLETAR |
+| Miguel Marcaida | DeepSeek (chat.deepseek.com) | DeepSeek-V3 | Asistencia en la resolución de conflictos de Git, creación y diseño de la tarjeta de perfil, conexión de rutas y ajustes de CSS responsivo. |
 
 Todo lo generado con IA fue revisado, adaptado y probado por el equipo.
 
@@ -85,4 +85,8 @@ Después abrir el enlace que muestra la terminal (normalmente `http://localhost:
 
 ## Capturas
 
-⚠️ COMPLETAR: agregar capturas de la portada, un perfil, el catálogo y la sección de la API. Guardarlas en una carpeta `capturas/` y enlazarlas así: `![Portada](capturas/portada.png)`.
+![Perfil](capturas/perfil.png)
+
+![Catálogo JSON](capturas/json.png)
+
+![API de Películas](capturas/api.png)

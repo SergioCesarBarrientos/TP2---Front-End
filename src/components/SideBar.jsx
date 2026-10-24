@@ -1,8 +1,18 @@
-import { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import { UserRoundGroup, House, Film, Database, GitBranch, BookOpen, ChevronDown, Menu, X,} from 'lucide-react';
-import './SideBar.css';
-import logo from '../assets/img/ifts.png';
+import { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import {
+  UserRoundGroup,
+  House,
+  Film,
+  Database,
+  GitBranch,
+  BookOpen,
+  ChevronDown,
+  Menu,
+  X,
+} from "lucide-react";
+import "./SideBar.css";
+import logo from "../assets/img/ifts.png";
 
 function SideBar() {
   const location = useLocation();
@@ -19,28 +29,36 @@ function SideBar() {
 
   const integrantes = [
     {
-      name: 'Sergio Cesar Barrientos',
-      path: '/Equipo/sergio-cesar-barrientos',
+      name: "Sergio Cesar Barrientos",
+      path: "/Equipo/sergio-cesar-barrientos",
     },
     {
-      name: 'Mariana Sosa',
-      path: '/Equipo/mariana-sosa',
+      name: "Mariana Sosa",
+      path: "/Equipo/mariana-sosa",
     },
-    { name: 'Carolina Silva Cotto', 
-      path: '/Equipo/carolina-silva-cotto' },
-    { name: 'Persona 4', path: '/Equipo/persona-4' },
-    { name: 'Persona 5', path: '/Equipo/persona-5' },
+    {
+      name: "Carolina Silva Cotto",
+      path: "/Equipo/carolina-silva-cotto",
+    },
+    {
+      name: "Miguel Marcaida",
+      path: "/Equipo/miguel-marcaida",
+    },
+    {
+      name: "Persona 5",
+      path: "/Equipo/persona-5",
+    },
   ];
 
   const menuItems = [
-    { name: 'Inicio', path: '/', icon: House },
-    { name: 'Películas API', path: '/PeliculasAPI', icon: Film },
-    { name: 'Películas JSON', path: '/PeliculasJson', icon: Database },
-    { name: 'Árbol', path: '/Arbol', icon: GitBranch },
-    { name: 'Bitácora', path: '/Bitacora', icon: BookOpen },
+    { name: "Inicio", path: "/", icon: House },
+    { name: "Películas API", path: "/PeliculasAPI", icon: Film },
+    { name: "Películas JSON", path: "/PeliculasJson", icon: Database },
+    { name: "Árbol", path: "/Arbol", icon: GitBranch },
+    { name: "Bitácora", path: "/Bitacora", icon: BookOpen },
   ];
 
-  const estaEnEquipo = location.pathname.startsWith('/Equipo');
+  const estaEnEquipo = location.pathname.startsWith("/Equipo");
 
   return (
     <>
@@ -49,7 +67,7 @@ function SideBar() {
         type="button"
         className="sidebar-toggle"
         onClick={() => setMenuAbierto(!menuAbierto)}
-        aria-label={menuAbierto ? 'Cerrar menú' : 'Abrir menú'}
+        aria-label={menuAbierto ? "Cerrar menú" : "Abrir menú"}
         aria-expanded={menuAbierto}
         aria-controls="menu-lateral"
       >
@@ -60,7 +78,7 @@ function SideBar() {
       <button
         type="button"
         className={`sidebar-overlay ${
-          menuAbierto ? 'sidebar-overlay-visible' : ''
+          menuAbierto ? "sidebar-overlay-visible" : ""
         }`}
         onClick={cerrarMenu}
         aria-label="Cerrar menú"
@@ -69,14 +87,10 @@ function SideBar() {
 
       <aside
         id="menu-lateral"
-        className={`sidebar ${menuAbierto ? 'sidebar-open' : ''}`}
+        className={`sidebar ${menuAbierto ? "sidebar-open" : ""}`}
       >
         <div className="sidebar-brand">
-          <img
-            src={logo}
-            alt="Logo IFTS"
-            className="sidebar-logo"
-          />
+          <img src={logo} alt="Logo IFTS" className="sidebar-logo" />
 
           <h2 className="sidebar-title">TechArg</h2>
           <p className="sidebar-subtitle">Equipo 32 - 2B</p>
@@ -89,7 +103,7 @@ function SideBar() {
             end
             onClick={cerrarMenu}
             className={({ isActive }) =>
-              `sidebar-link ${isActive ? 'active' : ''}`
+              `sidebar-link ${isActive ? "active" : ""}`
             }
           >
             <House size={20} strokeWidth={1.8} />
@@ -101,7 +115,7 @@ function SideBar() {
             <button
               type="button"
               className={`sidebar-link sidebar-team-button ${
-                estaEnEquipo ? 'active' : ''
+                estaEnEquipo ? "active" : ""
               }`}
               onClick={() => setEquipoAbierto(!equipoAbierto)}
               aria-expanded={equipoAbierto}
@@ -113,24 +127,19 @@ function SideBar() {
 
               <ChevronDown
                 size={16}
-                className={`sidebar-chevron ${
-                  equipoAbierto ? 'rotated' : ''
-                }`}
+                className={`sidebar-chevron ${equipoAbierto ? "rotated" : ""}`}
               />
             </button>
 
             {equipoAbierto && (
-              <div
-                className="sidebar-submenu"
-                id="sidebar-team-submenu"
-              >
+              <div className="sidebar-submenu" id="sidebar-team-submenu">
                 {integrantes.map((persona) => (
                   <NavLink
                     key={persona.path}
                     to={persona.path}
                     onClick={cerrarMenu}
                     className={({ isActive }) =>
-                      `sidebar-sublink ${isActive ? 'active' : ''}`
+                      `sidebar-sublink ${isActive ? "active" : ""}`
                     }
                   >
                     {persona.name}
@@ -150,7 +159,7 @@ function SideBar() {
                 to={item.path}
                 onClick={cerrarMenu}
                 className={({ isActive }) =>
-                  `sidebar-link ${isActive ? 'active' : ''}`
+                  `sidebar-link ${isActive ? "active" : ""}`
                 }
               >
                 <Icon size={20} strokeWidth={1.8} />
@@ -160,9 +169,7 @@ function SideBar() {
           })}
         </nav>
 
-        <div className="sidebar-footer">
-          DSWF - IFTS29
-        </div>
+        <div className="sidebar-footer">DSWF - IFTS29</div>
       </aside>
     </>
   );
