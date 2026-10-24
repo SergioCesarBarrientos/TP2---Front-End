@@ -6,6 +6,7 @@ import "./Inicio.css";
 import portada from '../assets/img/portada.png';
 import sergioFoto from "../assets/img/sergio.png";
 import marianaFoto from "../assets/img/mariana.jpg";
+import carolinaFoto from "../assets/img/carolina.png";
 
 const integrantes = [
   {
@@ -28,11 +29,12 @@ const integrantes = [
   },
   {
     id: 3,
-    nombre: "Persona 3",
-    puesto: "Desarrollador Frontend",
-    linkedin: "https://www.linkedin.com/",
-    github: "https://github.com/",
-    ruta: "/Equipo/persona-3",
+    nombre: "Carolina Silva Cotto",
+    puesto: "Desarrolladora Frontend",
+    foto: carolinaFoto,
+    linkedin: "https://www.linkedin.com/in/carolina-silva-cotto",
+    github: "https://github.com/csilvacotto-2202",
+    ruta: "/Equipo/carolina-silva-cotto",
   },
   {
     id: 4,
