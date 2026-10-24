@@ -11,6 +11,7 @@ import './Integrante.css';
 
 import sergioFoto from '../assets/img/sergio.png';
 import marianaFoto from '../assets/img/mariana.jpg';
+import carolinaFoto from '../assets/img/carolina.png';
 
 function Integrante() {
     const { id } = useParams();
@@ -72,21 +73,32 @@ function Integrante() {
             ],
         },
 
-        'persona-3': {
-            nombre: 'Persona 3',
-            rol: 'Estudiante y desarrollador web',
-            ciudad: '',
-            edad: null,
+        'carolina-silva-cotto': {
+            nombre: 'Carolina Silva Cotto',
+            rol: 'Estudiante de la Tecnicatura en Desarrollo de Software',
+            ciudad: 'Campana, Buenos Aires',
+            edad: 30,
             descripcion:
-                'Integrante del Equipo 32, participando en el desarrollo de TechArg.',
-            foto: '',
-              linkedin: 'https://www.linkedin.com',
-            github: 'https://github.com',
-            estudios: 'Estudiante de IFTS 29',
-            tecnologias: ['HTML', 'CSS', 'JavaScript', 'React'],
-            intereses: ['Programación', 'Diseño web'],
-            peliculas: [],
-            musica: [],
+                'Hola, soy Caro. Hice cursos de creación de páginas web y de testing manual, y en la tecnicatura vengo trabajando con C# y Python. Me interesan también las metodologías ágiles como Scrum para organizar el trabajo en equipo.\n\nMe interesa el testing, las metodologías ágiles y el desarrollo web. Me gusta trabajar en equipo y aprender viendo cómo funcionan las cosas.',
+            foto: carolinaFoto,
+            linkedin: 'https://www.linkedin.com/in/carolina-silva-cotto',
+            github: 'https://github.com/csilvacotto-2202',
+            estudios: 'Tecnicatura Superior en Desarrollo de Software - IFTS 29',
+            tecnologias: ['HTML5', 'CSS3', 'Testing Manual', 'Scrum / Ágil', 'C#', 'Python'],
+            intereses: ['Testing', 'Metodologías ágiles', 'Desarrollo web'],
+            peliculas: [
+                { titulo: 'Volver al futuro', anio: 1985, director: 'Robert Zemeckis' },
+                { titulo: 'Como si fuera la primera vez', anio: 2004, director: 'Peter Segal' },
+                { titulo: 'The Truman Show', anio: 1998, director: 'Peter Weir' },
+            ],
+             musica: [
+                { titulo: 'Rocanroles sin destino', artista: 'Callejeros' },
+                { titulo: "They Don't Care About Us", artista: 'Michael Jackson' },
+                { titulo: 'Sorry', artista: 'Madonna' },
+                { titulo: 'Bella traición', artista: 'Belinda' },
+                { titulo: 'Ya no sé qué hacer conmigo', artista: 'Cuarteto de Nos' },
+                { titulo: 'Muñeca de trapo', artista: 'La Oreja de Van Gogh' },
+            ],
         },
 
         'persona-4': {

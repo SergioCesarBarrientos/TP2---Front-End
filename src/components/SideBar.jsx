@@ -26,7 +26,8 @@ function SideBar() {
       name: 'Mariana Sosa',
       path: '/Equipo/mariana-sosa',
     },
-    { name: 'Persona 3', path: '/Equipo/persona-3' },
+    { name: 'Carolina Silva Cotto', 
+      path: '/Equipo/carolina-silva-cotto' },
     { name: 'Persona 4', path: '/Equipo/persona-4' },
     { name: 'Persona 5', path: '/Equipo/persona-5' },
   ];
