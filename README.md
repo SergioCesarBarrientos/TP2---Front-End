@@ -1,11 +1,11 @@
-# TechArg — TP2 Proyecto React en equipo
+# TP2 — TechArg — Proyecto React en equipo
 
 Trabajo Práctico Grupal 2 · Desarrollo de Sistemas Web (Front End) · 2.º cuatrimestre 2026 · Tecnicatura Superior en Desarrollo de Software a Distancia, IFTS 29 · Equipo 32 – 2.º B
 
 ## Índice
 
 - [Descripción del proyecto](#descripción-del-proyecto)
-- [Deploy](#deploy)
+- [Sitio publicado](#sitio-publicado)
 - [Integrantes](#integrantes)
 - [Uso de IA](#uso-de-ia)
 - [Tecnologías](#tecnologías)
@@ -25,9 +25,9 @@ Contiene:
 - **Árbol de renderizado:** jerarquía de componentes de la aplicación.
 - **Bitácora:** registro del proceso de trabajo del equipo.
 
-## Deploy
+## Sitio publicado
 
-⚠️ COMPLETAR: pegar acá el enlace de Vercel del TP2 (por ejemplo `https://....vercel.app`).
+- Vercel: https://tp-2-front-end-khaki.vercel.app/
 
 ## Integrantes
 
@@ -35,7 +35,7 @@ Contiene:
 | :--- | :--- | :--- |
 | Sergio Cesar Barrientos | [@SergioCesarBarrientos](https://github.com/SergioCesarBarrientos) | Esqueleto del proyecto, implementación de estructura, paleta de colores & fuentes, perfil propio (datos, foto, tarjeta de portada), diseño responsive, implementación de archivos JSON. |
 | Mariana Sosa | [@MaruSosa](https://github.com/MaruSosa) | Perfil propio (datos, foto y tarjeta de portada), Árbol de renderizado y Bitácora. |
-| Carolina Silva Cotto | [@csilvacotto-2202](https://github.com/csilvacotto-2202) | Perfil propio (datos, foto, tarjeta de portada y entrada en la sidebar) y configuración de `vercel.json` para el deploy, y redacción del README. |
+| Carolina Silva Cotto | [@csilvacotto-2202](https://github.com/csilvacotto-2202) | Perfil propio (datos, foto, tarjeta de portada y entrada en la sidebar), configuración de `vercel.json` para el deploy, y redacción del README. |
 | Karina Sánchez | [@karinaluciasanz](https://github.com/karinaluciasanz) | Perfil propio (datos, foto, tarjeta de presentación, integración en la página principal y ruta en Integrante.jsx) y maquetación de componentes del equipo.|
 | Miguel Marcaida | [@Miguel-Marcaida](https://github.com/Miguel-Marcaida) | Perfil propio (tarjeta, ruta dinámica y datos), implementación de la API de Películas (`fetch`, `useEffect`, estados de carga y error, búsqueda por texto), conexión de rutas y ajustes de estilos. |
 
@@ -85,14 +85,26 @@ Después abrir el enlace que muestra la terminal (normalmente `http://localhost:
 
 ## Capturas
 
-![Portada principal](capturas/principal.png)
+**Portada del equipo**
+
+![Portada](capturas/principal.png)
+
+**Perfil de un integrante**
 
 ![Perfil](capturas/perfil.png)
 
+**Catálogo JSON con búsqueda y filtro**
+
 ![Catálogo JSON](capturas/json.png)
+
+**Sección de series (API de TVMaze)**
 
 ![Series API](capturas/api.png)
 
+**Árbol de renderizado**
+
 ![Árbol de renderizado](capturas/arbol.png)
+
+**Bitácora**
 
 ![Bitácora](capturas/bitacora.png)
