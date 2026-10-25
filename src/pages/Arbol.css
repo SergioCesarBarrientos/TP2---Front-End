@@ -7,7 +7,7 @@
   font-family: var(--fuente-texto);
 }
 
-.arbol-page h2 {
+.arbol-page h1 {
   font-family: var(--fuente-titulos);
   color: var(--color-texto-principal);
   margin-bottom: 8px;
@@ -45,6 +45,11 @@
   color: var(--color-texto-principal);
   padding: 4px 0;
   transition: color 0.2s ease;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
 }
 
 .arbol-header:hover {
@@ -76,3 +81,10 @@
 .arbol-hijos {
   margin-top: 6px;
 }
+
+.arbol-archivo {
+     margin: 2px 0 0 20px;
+     font-family: monospace;
+     font-size: 0.8rem;
+     color: var(--color-primario);
+   }
