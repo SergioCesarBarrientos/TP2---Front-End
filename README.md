@@ -27,7 +27,7 @@ Contiene:
 
 ## Deploy
 
-⚠️ COMPLETAR: pegar acá el enlace de Vercel del TP2 (por ejemplo `https://....vercel.app`).
+https://tp-2-front-end-khaki.vercel.app/
 
 ## Integrantes
 
