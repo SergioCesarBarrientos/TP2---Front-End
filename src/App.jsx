@@ -1,34 +1,47 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Sidebar from "./components/SideBar";
 import Inicio from "./pages/Inicio";
-import Equipo from "./pages/Equipo";
+import Integrante from './pages/Integrante';
+<<<<<<< HEAD
+import PeliculasAPI from "./pages/PeliculasAPI";
+import PeliculasJson from "./pages/PeliculasJson";
+import Arbol from "./pages/Arbol";          // <--- 1. Importar Arbol
+import Bitacora from "./pages/Bitacora";    // <--- 2. Importar Bitacora
+=======
 import PeliculasAPI from "./pages/PeliculasAPI"
 import PeliculasJson from "./pages/PeliculasJson"
+// import Arbol from "./pages/Arbol";       <-- Comentado o borrado
+// import Bitacora from "./pages/Bitacora"; <-- Comentado o borrado
+>>>>>>> 76d3d9e4e1ab0cbbc69ce955108b0ffa0e30b352
 import Footer from "./components/Footer";
 import "./App.css";
-
 
 function App() {
   return (
     <BrowserRouter>
       <div className="app-layout">
         <Sidebar />
-
         <div className="app-contenido">
           <main className="app-pagina">
             <Routes>
               <Route path="/" element={<Inicio />} />
-              <Route path="/Equipo" element= {<Equipo /> } />
-              <Route path="/PeliculasAPI" element= {<PeliculasAPI /> } />
-              <Route path="/PeliculasJson" element={ <PeliculasJson />} />
-              {/* Acá agregar las demás páginas */}
-              {/* <Route path="/integrantes" element={<Integrantes />} /> */}
-              {/* <Route path="/proyectos" element={<Proyectos />} /> */}
+              <Route path="/Equipo/:id" element={<Integrante />} />
+              <Route path="/PeliculasAPI" element={<PeliculasAPI />} />
+              <Route path="/PeliculasJson" element={<PeliculasJson />} />
+<<<<<<< HEAD
+              
+              {/* Rutas de Árbol y Bitácora añadidas */}
+              <Route path="/Arbol" element={<Arbol />} />
+              <Route path="/Bitacora" element={<Bitacora />} />
 
+=======
+              {/* <Route path="/Arbol" element={<Arbol />} /> */}       {/* <-- Comentado o borrado */}
+              {/* <Route path="/Bitacora" element={<Bitacora />} /> */} {/* <-- Comentado o borrado */}
+              
+>>>>>>> 76d3d9e4e1ab0cbbc69ce955108b0ffa0e30b352
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
-
           <Footer />
         </div>
       </div>
@@ -37,4 +50,3 @@ function App() {
 }
 
 export default App;
-

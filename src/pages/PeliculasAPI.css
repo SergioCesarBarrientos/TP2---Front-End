@@ -298,3 +298,16 @@
   color: var(--color-texto-secundario);
   font-size: 14px;
 }
+
+/* Para las imágenes reales que trae la API */
+.pelicula-poster img {
+  width: 100%;
+  height: 210px; /* Le damos una altura fija para que todas queden parejas */
+  object-fit: cover; /* Recorta la imagen para que no se deforme */
+  display: block;
+}
+
+/* Si no hay imagen, que mantenga el color de fondo y el emoji */
+.pelicula-poster {
+  background: #102b4e; /* Color de fondo por defecto */
+}

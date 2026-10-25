@@ -1,36 +1,50 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import "./inicio.css";
+import "./Inicio.css";
+import portada from "../assets/img/portada.png";//este se usa?
+import sergioFoto from "../assets/img/sergio.png";
+import marianaFoto from "../assets/img/mariana.jpg";
+import carolinaFoto from "../assets/img/carolina.png";
+import fotoMiguel from "../assets/img/miguel.png";
 
 const integrantes = [
   {
     id: 1,
     nombre: "Sergio Cesar Barrientos",
     puesto: "Desarrollador Frontend",
+    foto: sergioFoto,
     linkedin: "https://www.linkedin.com/",
     github: "https://github.com/SergioCesarBarrientos",
+    ruta: "/Equipo/sergio-cesar-barrientos",
   },
   {
     id: 2,
-    nombre: "Persona 2",
-    puesto: "Desarrollador Frontend",
-    linkedin: "https://www.linkedin.com/",
-    github: "https://github.com/",
+    nombre: "Mariana Sosa",
+    puesto: "Desarrolladora Frontend",
+    foto: marianaFoto,
+    linkedin: "www.linkedin.com/in/mariana-sosa-0b2378185",
+    github: "https://github.com/MaruSosa",
+    ruta: "/Equipo/mariana-sosa",
   },
   {
     id: 3,
-    nombre: "Persona 3",
-    puesto: "Desarrollador Frontend",
-    linkedin: "https://www.linkedin.com/",
-    github: "https://github.com/",
+    nombre: "Carolina Silva Cotto",
+    puesto: "Desarrolladora Frontend",
+    foto: carolinaFoto,
+    linkedin: "https://www.linkedin.com/in/carolina-silva-cotto",
+    github: "https://github.com/csilvacotto-2202",
+    ruta: "/Equipo/carolina-silva-cotto",
   },
   {
     id: 4,
-    nombre: "Persona 4",
+    nombre: "Miguel Marcaida",
     puesto: "Desarrollador Frontend",
+    foto: fotoMiguel,
     linkedin: "https://www.linkedin.com/",
-    github: "https://github.com/",
+    github: "https://github.com/Miguel-Marcaida",
+    ruta: "/Equipo/miguel-marcaida",
   },
   {
     id: 5,
@@ -38,11 +52,13 @@ const integrantes = [
     puesto: "Desarrollador Frontend",
     linkedin: "https://www.linkedin.com/",
     github: "https://github.com/",
+    ruta: "/Equipo/persona-5",
   },
 ];
 
 function Inicio() {
   const [tarjetaActiva, setTarjetaActiva] = useState(null);
+  const navigate = useNavigate();
 
   const irAEquipo = () => {
     document
@@ -51,13 +67,14 @@ function Inicio() {
   };
 
   const verPerfil = (integrante) => {
-    console.log("Ver perfil de:", integrante.nombre);
+    navigate(integrante.ruta);
+    window.scrollTo(0, 0);
   };
 
   return (
     <main className="home">
       <header className="marca-superior">
-         IFTS<span>29</span>
+        IFTS<span>29</span>
       </header>
 
       <section className="home-banner">
@@ -67,21 +84,14 @@ function Inicio() {
           </h1>
 
           <p>
-            Somos el equipo TechArg y desarrollamos esta
-            pagina de peliculas para esta segunda entrega de la materia DSWF de IFTS 29.
+            Somos el equipo TechArg y desarrollamos esta página de películas
+            para esta segunda entrega de la materia DSWF de IFTS 29.
           </p>
 
           <button className="banner-boton" onClick={irAEquipo}>
             Conocé al equipo
             <ArrowRight size={18} />
           </button>
-        </div>
-
-        <div className="banner-decoracion" aria-hidden="true">
-          <div className="banner-circulo circulo-uno" />
-          <div className="banner-circulo circulo-dos" />
-          <div className="banner-circulo circulo-tres" />
-          <div className="banner-codigo">&lt;/&gt;</div>
         </div>
       </section>
 
@@ -93,8 +103,7 @@ function Inicio() {
             </span>
 
             <h2>Nuestro equipo</h2>
-
-            <p>Visita los perfiles del equipo TechArg.</p>
+            <p>Visitá los perfiles del equipo TechArg.</p>
           </div>
         </div>
 
@@ -109,28 +118,30 @@ function Inicio() {
               <article
                 key={integrante.id}
                 className={`equipo-card ${
-                  activa
-                    ? `card-seleccionada ${colorSeleccion}`
-                    : ""
+                  activa ? `card-seleccionada ${colorSeleccion}` : ""
                 }`}
-                onClick={() =>
-                  setTarjetaActiva(activa ? null : integrante.id)
-                }
+                onClick={() => setTarjetaActiva(activa ? null : integrante.id)}
               >
                 <div className="foto-contenedor">
-                  <div
-                    className="foto-placeholder"
-                    role="img"
-                    aria-label={`Foto de ${integrante.nombre}`}
-                  />
+                  {integrante.foto ? (
+                    <img
+                      src={integrante.foto}
+                      alt={`Foto de ${integrante.nombre}`}
+                      className="foto-placeholder"
+                    />
+                  ) : (
+                    <div
+                      className="foto-placeholder"
+                      role="img"
+                      aria-label={`Foto pendiente de ${integrante.nombre}`}
+                    />
+                  )}
                 </div>
 
                 <div className="card-contenido">
                   <h3>{integrante.nombre}</h3>
 
-                  <p className="integrante-puesto">
-                    {integrante.puesto}
-                  </p>
+                  <p className="integrante-puesto">{integrante.puesto}</p>
 
                   <div className="integrante-redes">
                     <a
