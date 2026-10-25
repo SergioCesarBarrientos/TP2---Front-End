@@ -42,7 +42,7 @@ const integrantes = [
     nombre: "Miguel Marcaida",
     puesto: "Desarrollador Frontend",
     foto: fotoMiguel,
-    linkedin: "https://www.linkedin.com/",
+    linkedin: "https://www.linkedin.com/in/miguelmarcaida",
     github: "https://github.com/Miguel-Marcaida",
     ruta: "/Equipo/miguel-marcaida",
   },
