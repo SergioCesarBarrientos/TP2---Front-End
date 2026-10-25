@@ -40,8 +40,8 @@ function SideBar() {
       path: "/Equipo/miguel-marcaida",
     },
     {
-      name: "Persona 5",
-      path: "/Equipo/persona-5",
+      name: "Karina Sánchez",
+      path: "/Equipo/karina-sanchez",
     },
   ];
 
