@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { GraduationCap, Code2, Heart, Film, Music } from "lucide-react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
@@ -11,6 +12,10 @@ import karinaFoto from "../assets/img/karina.png";
 
 function Integrante() {
   const { id } = useParams();
+  
+  // Estados para el botón de "Ver más"
+  const [verPeliculas, setVerPeliculas] = useState(false);
+  const [verMusica, setVerMusica] = useState(false);
 
   const integrantes = {
     "sergio-cesar-barrientos": {
@@ -25,50 +30,24 @@ function Integrante() {
       github: "https://github.com/sergiocesarbarrientos",
       estudios: "Tecnicatura Superior en Desarrollo de Software - IFTS 29",
       tecnologias: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React",
-        "MySQL",
-        "MongoDB",
-        "Testing QA",
-        "Automatización de pruebas",
+        "HTML", "CSS", "JavaScript", "React", "MySQL", "MongoDB", "Testing QA", "Automatización de pruebas",
       ],
       intereses: [
-        "Desarrollo Web Full Stack",
-        "Testing QA",
-        "Automatización de pruebas",
-        "Tecnología",
+        "Desarrollo Web Full Stack", "Testing QA", "Automatización de pruebas", "Tecnología",
       ],
-
       peliculas: [
-        {
-          titulo: "El amanecer de los muertos",
-          anio: 2004,
-          director: "Zack Snyder",
-        },
-        {
-          titulo: "Resident Evil",
-          anio: 2002,
-          director: "Paul W. S. Anderson",
-        },
+        { titulo: "El amanecer de los muertos", anio: 2004, director: "Zack Snyder" },
+        { titulo: "Resident Evil", anio: 2002, director: "Paul W. S. Anderson" },
         { titulo: "Train to Busan", anio: 2016, director: "Yeon Sang-ho" },
         { titulo: "28 días después", anio: 2002, director: "Danny Boyle" },
         { titulo: "Guerra Mundial Z", anio: 2013, director: "Marc Forster" },
         { titulo: "Zombieland", anio: 2009, director: "Ruben Fleischer" },
       ],
-
       musica: [
         { titulo: "De música ligera", artista: "Soda Stereo" },
         { titulo: "Persiana americana", artista: "Soda Stereo" },
-        {
-          titulo: "Ji ji ji",
-          artista: "Patricio Rey y sus Redonditos de Ricota",
-        },
-        {
-          titulo: "Loco (tu forma de ser)",
-          artista: "Los Auténticos Decadentes",
-        },
+        { titulo: "Ji ji ji", artista: "Patricio Rey y sus Redonditos de Ricota" },
+        { titulo: "Loco (tu forma de ser)", artista: "Los Auténticos Decadentes" },
       ],
     },
 
@@ -84,20 +63,10 @@ function Integrante() {
       github: "https://github.com/MaruSosa",
       estudios: "Ingeniería en Sistemas y Desarrollo de Software",
       tecnologias: [
-        "JavaScript",
-        "C#",
-        "Node.js",
-        "Express",
-        "HTML",
-        "CSS",
-        "MySQL",
-        "Git",
+        "JavaScript", "C#", "Node.js", "Express", "HTML", "CSS", "MySQL", "Git",
       ],
       intereses: [
-        "Desarrollo Web",
-        "Programación",
-        "Diseño de Interfaces",
-        "Bases de datos",
+        "Desarrollo Web", "Programación", "Diseño de Interfaces", "Bases de datos",
       ],
       peliculas: [
         { titulo: "Psicosis", anio: 1960, director: "Alfred Hitchcock" },
@@ -108,10 +77,7 @@ function Integrante() {
         { titulo: "November Rain", artista: "Guns N Roses" },
         { titulo: "Knockin On Heavens Door", artista: "Guns N Roses" },
         { titulo: "Flowers", artista: "Miley Cyrus" },
-        {
-          titulo: "Seguir viviendo sin tu amor",
-          artista: "Luis Alberto Spinetta",
-        },
+        { titulo: "Seguir viviendo sin tu amor", artista: "Luis Alberto Spinetta" },
       ],
     },
 
@@ -127,21 +93,12 @@ function Integrante() {
       github: "https://github.com/csilvacotto-2202",
       estudios: "Tecnicatura Superior en Desarrollo de Software - IFTS 29",
       tecnologias: [
-        "HTML5",
-        "CSS3",
-        "Testing Manual",
-        "Scrum / Ágil",
-        "C#",
-        "Python",
+        "HTML5", "CSS3", "Testing Manual", "Scrum / Ágil", "C#", "Python",
       ],
       intereses: ["Testing", "Metodologías ágiles", "Desarrollo web"],
       peliculas: [
         { titulo: "Volver al futuro", anio: 1985, director: "Robert Zemeckis" },
-        {
-          titulo: "Como si fuera la primera vez",
-          anio: 2004,
-          director: "Peter Segal",
-        },
+        { titulo: "Como si fuera la primera vez", anio: 2004, director: "Peter Segal" },
         { titulo: "The Truman Show", anio: 1998, director: "Peter Weir" },
       ],
       musica: [
@@ -162,27 +119,20 @@ function Integrante() {
       descripcion:
         "Soy estudiante de la Tecnicatura en Desarrollo de Software en el IFTS 29. Me enfoco en el desarrollo web frontend, la integración de APIs y el despliegue de aplicaciones. Me interesa entender el funcionamiento interno de las herramientas que uso y aplicar esos conocimientos en proyectos concretos.",
       foto: fotoMiguel,
-      linkedin:
-        "https://www.linkedin.com/in/miguelmarcaida/?isSelfProfile=true",
+      linkedin: "https://www.linkedin.com/in/miguelmarcaida/?isSelfProfile=true",
       github: "https://github.com/Miguel-Marcaida",
       estudios: "Tecnicatura Superior en Desarrollo de Software - IFTS 29",
       tecnologias: ["HTML", "CSS", "JavaScript", "React", "Vite", "Git"],
       intereses: ["Desarrollo Web", "Frontend", "APIs", "Testing"],
       peliculas: [
-        {
-          titulo: "Batman: El Caballero de la Noche",
-          anio: 2008,
-          director: "Christopher Nolan",
-        },
-        {
-          titulo: "Transformers 4: La Era de la Extinción",
-          anio: 2014,
-          director: "Michael Bay",
-        },
+        { titulo: "Batman: El Caballero de la Noche", anio: 2008, director: "Christopher Nolan" },
+        { titulo: "Transformers 4: La Era de la Extinción", anio: 2014, director: "Michael Bay" },
+        { titulo: "Avengers: Endgame", anio: 2019, director: "Anthony Russo y Joe Russo" },
       ],
       musica: [
         { titulo: "Ramito de Violetas", artista: "La Mona Jiménez" },
         { titulo: "La Ley Y La Trampa", artista: "Chaqueño Palavecino" },
+        { titulo: "El hielo y el whisky", artista: "Ulises bueno" },
       ],
     },
 
@@ -191,37 +141,20 @@ function Integrante() {
       rol: "Estudiante y desarrollador web",
       ciudad: "Zarate, Buenos Aires",
       edad: 29,
-      descripcion:
-        "Integrante del Equipo 32, participando en el desarrollo de TechArg.",
+      descripcion: "Integrante del Equipo 32, participando en el desarrollo de TechArg.",
       foto: karinaFoto,
       linkedin: "https://www.linkedin.com/in/karina-sanchez-46165228a/",
       github: "https://github.com/karinaluciasanz",
       estudios: "Estudiante de IFTS 29",
       tecnologias: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React",
-        "MySQL",
-        "Java",
-        "Node.js",
-        "Android",
-        "CorelDRAW",
-        "Git",
+        "HTML", "CSS", "JavaScript", "React", "MySQL", "Java", "Node.js", "Android", "CorelDRAW", "Git",
       ],
       intereses: [
-        "Desarrollo Frontend",
-        "Diseño Gráfico",
-        "Bases de Datos",
-        "Desarrollo Mobile",
+        "Desarrollo Frontend", "Diseño Gráfico", "Bases de Datos", "Desarrollo Mobile",
       ],
       peliculas: [
         { titulo: "Black Swan", anio: 2010, director: "Darren Aronofsky" },
-        {
-          titulo: "Guardians of the Galaxy",
-          anio: 2014,
-          director: "James Gunn",
-        },
+        { titulo: "Guardians of the Galaxy", anio: 2014, director: "James Gunn" },
         { titulo: "Avengers", anio: 2012, director: "Joss Whedon" },
       ],
       musica: [
@@ -231,6 +164,7 @@ function Integrante() {
       ],
     },
   };
+  
   const integrante = integrantes[id];
   if (!integrante) {
     return <Navigate to="/" replace />;
@@ -369,7 +303,8 @@ function Integrante() {
               </div>
 
               <ul className="integrante-lista-peliculas">
-                {integrante.peliculas.map((pelicula) => (
+                {/* Lógica del botón Ver más */}
+                {(verPeliculas ? integrante.peliculas : integrante.peliculas.slice(0, 2)).map((pelicula) => (
                   <li key={pelicula.titulo}>
                     <strong>{pelicula.titulo}</strong>
                     <span>
@@ -378,6 +313,16 @@ function Integrante() {
                   </li>
                 ))}
               </ul>
+
+              {/* El botón solo aparece si hay más de 2 películas */}
+              {integrante.peliculas.length > 2 && (
+                <button 
+                  className="integrante-boton-ver-mas" 
+                  onClick={() => setVerPeliculas(!verPeliculas)}
+                >
+                  {verPeliculas ? "Ver menos" : "Ver todas las películas"}
+                </button>
+              )}
             </div>
 
             <div className="integrante-favorito-card">
@@ -387,13 +332,24 @@ function Integrante() {
               </div>
 
               <ul className="integrante-lista-musica">
-                {integrante.musica.map((cancion) => (
+                {/* Lógica del botón Ver más */}
+                {(verMusica ? integrante.musica : integrante.musica.slice(0, 2)).map((cancion) => (
                   <li key={cancion.titulo}>
                     <strong>{cancion.titulo}</strong>
                     <span>{cancion.artista}</span>
                   </li>
                 ))}
               </ul>
+
+               {/* El botón solo aparece si hay más de 2 canciones */}
+              {integrante.musica.length > 2 && (
+                <button 
+                  className="integrante-boton-ver-mas" 
+                  onClick={() => setVerMusica(!verMusica)}
+                >
+                  {verMusica ? "Ver menos" : "Ver toda la música"}
+                </button>
+              )}
             </div>
           </section>
         )}
