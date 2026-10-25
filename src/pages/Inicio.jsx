@@ -24,7 +24,7 @@ const integrantes = [
     nombre: "Mariana Sosa",
     puesto: "Desarrolladora Frontend",
     foto: marianaFoto,
-    linkedin: "www.linkedin.com/in/mariana-sosa-0b2378185",
+    linkedin: "https://www.linkedin.com/in/mariana-sosa-0b2378185",
     github: "https://github.com/MaruSosa",
     ruta: "/Equipo/mariana-sosa",
   },

@@ -34,7 +34,7 @@ const registros = [
     fecha: "Octubre 2026",
     tipo: "Decisión",
     titulo: "Elección de la API pública",
-    resumen: "Usamos la API de TVMaze para la sección de películas.",
+    resumen: "Usamos la API de TVMaze para la sección de series.",
     detalle:
       "Se consulta desde el navegador sin clave privada, como pide la consigna. La página muestra un mensaje mientras carga y otro si hay un error.",
   },
