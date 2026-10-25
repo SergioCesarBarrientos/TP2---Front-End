@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { GraduationCap, Code2, Heart, Film, Music } from "lucide-react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import "./Integrante.css";
@@ -7,6 +7,7 @@ import sergioFoto from "../assets/img/sergio.png";
 import marianaFoto from "../assets/img/mariana.jpg";
 import carolinaFoto from "../assets/img/carolina.png";
 import fotoMiguel from "../assets/img/miguel.png";
+import karinaFoto from "../assets/img/karina.png";
 
 function Integrante() {
   const { id } = useParams();
@@ -79,7 +80,7 @@ function Integrante() {
       descripcion:
         "Soy estudiante de Ingeniería en Sistemas y Desarrollo de Software. Me apasiona la programación, el desarrollo web y la creación de soluciones tecnológicas, combinando la lógica del código con el diseño.",
       foto: marianaFoto,
-      linkedin: "www.linkedin.com/in/mariana-sosa-0b2378185",
+      linkedin: "https://www.linkedin.com/in/mariana-sosa-0b2378185",
       github: "https://github.com/MaruSosa",
       estudios: "Ingeniería en Sistemas y Desarrollo de Software",
       tecnologias: [
@@ -159,7 +160,7 @@ function Integrante() {
       ciudad: "San Miguel de Tucuman",
       edad: 39,
       descripcion:
-        "Soy estudiante de la Tecnicatura en Desarrollo de Software en el IFTS 29. Me apasiona el desarrollo web frontend, la integración de APIs y el despliegue de aplicaciones.",
+        "Soy estudiante de la Tecnicatura en Desarrollo de Software en el IFTS 29. Me enfoco en el desarrollo web frontend, la integración de APIs y el despliegue de aplicaciones. Me interesa entender el funcionamiento interno de las herramientas que uso y aplicar esos conocimientos en proyectos concretos.",
       foto: fotoMiguel,
       linkedin:
         "https://www.linkedin.com/in/miguelmarcaida/?isSelfProfile=true",
@@ -168,37 +169,72 @@ function Integrante() {
       tecnologias: ["HTML", "CSS", "JavaScript", "React", "Vite", "Git"],
       intereses: ["Desarrollo Web", "Frontend", "APIs", "Testing"],
       peliculas: [
-        { titulo: "Interestelar", anio: 2014, director: "Christopher Nolan" },
         {
-          titulo: "El Señor de los Anillos",
-          anio: 2001,
-          director: "Peter Jackson",
+          titulo: "Batman: El Caballero de la Noche",
+          anio: 2008,
+          director: "Christopher Nolan",
+        },
+        {
+          titulo: "Transformers 4: La Era de la Extinción",
+          anio: 2014,
+          director: "Michael Bay",
         },
       ],
       musica: [
-        { titulo: "Bohemian Rhapsody", artista: "Queen" },
-        { titulo: "De Música Ligera", artista: "Soda Stereo" },
+        { titulo: "Ramito de Violetas", artista: "La Mona Jiménez" },
+        { titulo: "La Ley Y La Trampa", artista: "Chaqueño Palavecino" },
       ],
     },
 
-    "persona-5": {
-      nombre: "Persona 5",
+    "karina-sanchez": {
+      nombre: "Karina Sánchez",
       rol: "Estudiante y desarrollador web",
-      ciudad: "",
-      edad: null,
+      ciudad: "Zarate, Buenos Aires",
+      edad: 29,
       descripcion:
         "Integrante del Equipo 32, participando en el desarrollo de TechArg.",
-      foto: "",
-      linkedin: "https://www.linkedin.com",
-      github: "https://github.com",
+      foto: karinaFoto,
+      linkedin: "https://www.linkedin.com/in/karina-sanchez-46165228a/",
+      github: "https://github.com/karinaluciasanz",
       estudios: "Estudiante de IFTS 29",
-      tecnologias: ["HTML", "CSS", "JavaScript", "React"],
-      intereses: ["Programación", "Tecnología"],
-      peliculas: [],
-      musica: [],
+      tecnologias: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "MySQL",
+        "Java",
+        "Node.js",
+        "Android",
+        "CorelDRAW",
+        "Git",
+      ],
+      intereses: [
+        "Desarrollo Frontend",
+        "Diseño Gráfico",
+        "Bases de Datos",
+        "Desarrollo Mobile",
+      ],
+      peliculas: [
+        { titulo: "Black Swan", anio: 2010, director: "Darren Aronofsky" },
+        {
+          titulo: "Guardians of the Galaxy",
+          anio: 2014,
+          director: "James Gunn",
+        },
+        { titulo: "Avengers", anio: 2012, director: "Joss Whedon" },
+      ],
+      musica: [
+        { titulo: "Smooth Operator", artista: "Sade" },
+        { titulo: "Late Night", artista: "Solomun" },
+        { titulo: "Gravity", artista: "Boris Brejcha" },
+      ],
     },
   };
   const integrante = integrantes[id];
+  if (!integrante) {
+    return <Navigate to="/" replace />;
+  }
 
   return (
     <>

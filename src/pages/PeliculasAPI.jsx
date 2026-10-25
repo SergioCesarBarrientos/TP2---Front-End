@@ -2,17 +2,17 @@ import { useState, useEffect } from "react";
 import "./PeliculasAPI.css";
 
 function PeliculasAPI() {
-  // Estado para el texto que el usuario escribe
   const [inputValue, setInputValue] = useState("");
-  // Estado para el término que se busca en la API
-  const [busqueda, setBusqueda] = useState("");
-  
+  const [generoInput, setGeneroInput] = useState(""); // Lo que se selecciona en el combo
+
+  const [busqueda, setBusqueda] = useState(""); // El título que se busca en la API
+  const [generoBuscado, setGeneroBuscado] = useState(""); // El género que se aplica al filtrar
+
   const [peliculas, setPeliculas] = useState([]);
   const [cargando, setCargando] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Solo busca si hay una búsqueda activa
     const buscarPeliculas = async () => {
       if (busqueda.trim() === "") {
         setPeliculas([]);
@@ -23,15 +23,13 @@ function PeliculasAPI() {
       setError(null);
 
       try {
-        const res = await fetch(`https://api.tvmaze.com/search/shows?q=${busqueda}`);
-        
-        if (!res.ok) {
-          throw new Error("Error al buscar películas");
-        }
-        
+        const res = await fetch(
+          `https://api.tvmaze.com/search/shows?q=${busqueda}`,
+        );
+        if (!res.ok) throw new Error("Error al buscar series");
+
         const data = await res.json();
         const peliculasSeguras = Array.isArray(data) ? data : [];
-        
         setPeliculas(peliculasSeguras);
       } catch (err) {
         setError(err.message);
@@ -44,11 +42,18 @@ function PeliculasAPI() {
     buscarPeliculas();
   }, [busqueda]);
 
-  // Función que se ejecuta al apretar "Buscar"
+  // Se ejecuta SOLO al apretar el botón "Buscar"
   const handleBuscar = (e) => {
     e.preventDefault();
     setBusqueda(inputValue);
+    setGeneroBuscado(generoInput); // Recién acá se aplica el filtro
   };
+
+  // Se aplica el filtro con el estado "generoBuscado"
+  const peliculasFiltradas = peliculas.filter((item) => {
+    if (generoBuscado === "") return true;
+    return item.show.genres.includes(generoBuscado);
+  });
 
   return (
     <>
@@ -59,9 +64,9 @@ function PeliculasAPI() {
       <div className="peliculas-pagina">
         <section className="peliculas-intro">
           <p className="peliculas-etiqueta">CATÁLOGO</p>
-          <h1>Películas API</h1>
+          <h1>Series API</h1>
           <p className="peliculas-descripcion">
-            Explorá las películas más populares con la API.
+            Buscá series en TVMaze: nombre, géneros, imagen y descripción.
           </p>
         </section>
 
@@ -79,14 +84,24 @@ function PeliculasAPI() {
             </div>
 
             <div className="peliculas-campo">
-              <label htmlFor="buscar-genero">Buscar por género</label>
-              <select id="buscar-genero" defaultValue="">
+              <label htmlFor="buscar-genero">Filtrar por género</label>
+              <select
+                id="buscar-genero"
+                value={generoInput}
+                onChange={(e) => setGeneroInput(e.target.value)} // Solo actualiza el combo visual
+              >
                 <option value="">Todos los géneros</option>
-                <option value="Acción">Acción</option>
-                <option value="Animación">Animación</option>
-                <option value="Ciencia ficción">Ciencia ficción</option>
+                <option value="Action">Acción</option>
+                <option value="Adventure">Aventura</option>
+                <option value="Animation">Animación</option>
+                <option value="Comedy">Comedia</option>
+                <option value="Crime">Crimen</option>
+                <option value="Drama">Drama</option>
+                <option value="Fantasy">Fantasía</option>
+                <option value="Horror">Terror</option>
                 <option value="Romance">Romance</option>
-                <option value="Terror">Terror</option>
+                <option value="Science-Fiction">Ciencia ficción</option>
+                <option value="Thriller">Suspenso</option>
               </select>
             </div>
 
@@ -98,20 +113,36 @@ function PeliculasAPI() {
 
         <section className="peliculas-resultados">
           <div className="peliculas-resultados-cabecera">
-            <h2>Películas disponibles</h2>
+            <h2>Series disponibles</h2>
           </div>
 
           <div className="peliculas-grid">
-            {cargando && <p>Buscando películas...</p>}
+            {cargando && <p>Buscando series...</p>}
 
-            {error && <p style={{ color: "red" }}>Hubo un error: {error}</p>}
-
-            {!cargando && !error && peliculas.length === 0 && busqueda !== "" && (
-              <p>No se encontraron resultados para "{busqueda}".</p>
+            {error && (
+              <div style={{ textAlign: "center", margin: "20px 0", gridColumn: "1 / -1" }}>
+                <p style={{ color: "red" }}>Hubo un error: {error}</p>
+                <button
+                  className="peliculas-boton"
+                  onClick={() => setBusqueda(inputValue)}
+                  style={{ marginTop: "10px" }}
+                >
+                  Reintentar
+                </button>
+              </div>
             )}
 
-            {!cargando && !error && peliculas.length > 0 &&
-              peliculas.map((item) => {
+            {!cargando &&
+              !error &&
+              peliculasFiltradas.length === 0 &&
+              busqueda !== "" && (
+                <p style={{ gridColumn: "1 / -1" }}>No se encontraron resultados con esos filtros.</p>
+              )}
+
+            {!cargando &&
+              !error &&
+              peliculasFiltradas.length > 0 &&
+              peliculasFiltradas.map((item) => {
                 const show = item.show;
                 return (
                   <article key={show.id} className="pelicula-card">
@@ -120,7 +151,11 @@ function PeliculasAPI() {
                         <img
                           src={show.image.medium}
                           alt={show.name}
-                          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                          }}
                         />
                       ) : (
                         <span className="pelicula-poster-emoji">🎬</span>
@@ -128,7 +163,9 @@ function PeliculasAPI() {
                     </div>
                     <div className="pelicula-info">
                       <span className="pelicula-genero">
-                        {show.genres[0] || "Sin género"}
+                        {show.genres.length > 0
+                          ? show.genres.join(" · ")
+                          : "Sin género"}
                       </span>
                       <h3>{show.name}</h3>
                       <p
