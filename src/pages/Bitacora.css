@@ -95,3 +95,145 @@
 .bitacora-vacio {
   color: var(--color-texto-secundario);
 }
+
+/* ==========================
+   RESPONSIVE - BITÁCORA
+========================== */
+
+.bitacora-pagina {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.bitacora-pagina * {
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .bitacora-pagina {
+    padding: 24px 16px 32px;
+  }
+
+  .bitacora-titulo {
+    font-size: 1.6rem;
+    overflow-wrap: anywhere;
+  }
+
+  .bitacora-intro {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .bitacora-filtros {
+    gap: 8px;
+  }
+
+  .bitacora-filtro {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .bitacora-registro {
+    padding: 14px;
+    min-width: 0;
+  }
+
+  .bitacora-registro summary {
+    gap: 8px;
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+  }
+
+  .bitacora-fecha {
+    margin-left: 0;
+    width: 100%;
+    font-size: 0.82rem;
+  }
+
+  .bitacora-etiqueta {
+    font-size: 0.7rem;
+  }
+
+  .bitacora-detalle {
+    overflow-wrap: anywhere;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .bitacora-pagina {
+    padding: 20px 12px 28px;
+  }
+
+  .bitacora-titulo {
+    font-size: 1.4rem;
+  }
+
+  .bitacora-filtro {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+  }
+
+  .bitacora-registro {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .bitacora-registro summary {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive: mantener espacio para el botón del menú */
+@media (max-width: 600px) {
+  .bitacora-pagina {
+    padding: 0 5% 30px;
+  }
+
+  .bitacora-titulo {
+    margin-top: 0;
+    font-size: 25px;
+    line-height: 1.3;
+  }
+
+  .bitacora-intro {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+
+/* RESPONSIVE: BITÁCORA */
+@media (max-width: 600px) {
+  .bitacora-pagina {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 76px 5% 30px;
+  }
+
+  .bitacora-titulo {
+    margin-top: 0;
+    font-size: 25px;
+    line-height: 1.3;
+  }
+
+  .bitacora-intro {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .bitacora-registro {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .bitacora-registro summary {
+    overflow-wrap: anywhere;
+  }
+
+  .bitacora-fecha {
+    margin-left: 0;
+  }
+}
