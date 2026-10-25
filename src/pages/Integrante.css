@@ -465,3 +465,298 @@
 .integrante-page .integrante-lista-musica li:hover strong {
     color: var(--color-secundario);
 }
+
+
+/* ========================================
+   RESPONSIVE: TABLETS
+======================================== */
+
+@media (max-width: 1024px) {
+    .integrante-page {
+        padding: 15px 24px 35px;
+    }
+
+    .integrante-page .integrante-presentacion {
+        width: 100%;
+        gap: 28px;
+        padding: 25px;
+    }
+
+    .integrante-page .integrante-seccion,
+    .integrante-page .integrante-favoritos {
+        width: 85%;
+    }
+
+    .integrante-page .integrante-datos h1 {
+        font-size: 27px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE: CELULARES
+======================================== */
+
+@media (max-width: 768px) {
+    .integrante-header {
+        padding: 14px 20px;
+        font-size: 12px;
+    }
+
+    .integrante-page {
+        padding: 10px 16px 30px;
+    }
+
+    /* Presentación principal */
+
+    .integrante-page .integrante-presentacion {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        padding: 22px 18px;
+    }
+
+    /* Foto */
+
+    .integrante-page .integrante-foto-contenedor {
+        width: 180px;
+        flex: 0 0 auto;
+    }
+
+    .integrante-page .integrante-foto,
+    .integrante-page .integrante-foto-vacia {
+        width: 180px;
+        height: 210px;
+    }
+
+    /* Datos personales */
+
+    .integrante-page .integrante-datos {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .integrante-page .integrante-etiqueta {
+        margin-bottom: 8px;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .integrante-page .integrante-datos h1 {
+        font-size: clamp(23px, 6vw, 28px);
+        overflow-wrap: anywhere;
+    }
+
+    .integrante-page .integrante-rol {
+        margin: 8px 0 14px;
+        font-size: 14px;
+    }
+
+    .integrante-page .integrante-detalles {
+        justify-content: center;
+        gap: 10px 16px;
+    }
+
+    .integrante-page .integrante-detalles p {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .integrante-page .integrante-descripcion {
+        margin: 16px 0;
+        font-size: 13px;
+        line-height: 1.7;
+        text-align: left;
+        overflow-wrap: anywhere;
+    }
+
+    /* Redes sociales */
+
+    .integrante-page .integrante-redes {
+        justify-content: center;
+        margin-top: 12px;
+    }
+
+    .integrante-page .icono-red {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
+    }
+
+    /* Sección sobre mí */
+
+    .integrante-page .integrante-seccion {
+        width: 100%;
+        margin-top: 22px;
+        padding: 22px 18px;
+    }
+
+    .integrante-page .integrante-seccion > h2 {
+        margin-bottom: 20px;
+        font-size: 21px;
+    }
+
+    /* Información */
+
+    .integrante-page .integrante-info {
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .integrante-page .integrante-info-icono {
+        width: 38px;
+        height: 38px;
+    }
+
+    .integrante-page .integrante-info h3 {
+        font-size: 14px;
+    }
+
+    .integrante-page .integrante-info p {
+        font-size: 13px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+
+    /* Etiquetas */
+
+    .integrante-page .integrante-etiquetas {
+        gap: 7px;
+    }
+
+    .integrante-page .integrante-chip {
+        padding: 7px 10px;
+        font-size: 11px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Películas y música */
+
+    .integrante-page .integrante-favoritos {
+        width: 100%;
+        gap: 16px;
+        margin-top: 22px;
+    }
+
+    .integrante-page .integrante-favorito-card {
+        padding: 20px 18px;
+    }
+
+    .integrante-page .integrante-favorito-titulo {
+        gap: 8px;
+    }
+
+    .integrante-page .integrante-favorito-titulo h2 {
+        font-size: 16px;
+        overflow-wrap: anywhere;
+    }
+
+    .integrante-page .integrante-favorito-card ul {
+        margin-top: 16px;
+        padding-left: 20px;
+        font-size: 13px;
+    }
+
+    .integrante-page .integrante-lista-peliculas li strong,
+    .integrante-page .integrante-lista-musica li strong {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    .integrante-page .integrante-lista-peliculas li span,
+    .integrante-page .integrante-lista-musica li span {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+}
+
+/* ========================================
+   RESPONSIVE: CELULARES PEQUEÑOS
+======================================== */
+
+@media (max-width: 480px) {
+    .integrante-header {
+        padding: 12px 14px;
+        font-size: 11px;
+    }
+
+    .integrante-page {
+        padding: 8px 12px 24px;
+    }
+
+    .integrante-page .integrante-presentacion {
+        padding: 18px 14px;
+        gap: 18px;
+        border-radius: 12px;
+    }
+
+    .integrante-page .integrante-foto-contenedor {
+        width: 155px;
+    }
+
+    .integrante-page .integrante-foto,
+    .integrante-page .integrante-foto-vacia {
+        width: 155px;
+        height: 185px;
+    }
+
+    .integrante-page .integrante-datos h1 {
+        font-size: 23px;
+    }
+
+    .integrante-page .integrante-detalles {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .integrante-page .integrante-seccion {
+        padding: 18px 14px;
+        border-radius: 12px;
+    }
+
+    .integrante-page .integrante-seccion > h2 {
+        font-size: 19px;
+    }
+
+    .integrante-page .integrante-info {
+        gap: 10px;
+    }
+
+    .integrante-page .integrante-info-icono {
+        width: 34px;
+        height: 34px;
+    }
+
+    .integrante-page .integrante-favorito-card {
+        padding: 17px 14px;
+        border-radius: 12px;
+    }
+
+    .integrante-page .integrante-favorito-titulo h2 {
+        font-size: 15px;
+    }
+
+    /* Evita animaciones que puedan provocar
+       movimientos incómodos en pantallas táctiles */
+
+    .integrante-page .integrante-seccion:hover,
+    .integrante-page .integrante-favorito-card:hover {
+        transform: none;
+    }
+}
+
+/* ========================================
+   ACCESIBILIDAD: REDUCIR MOVIMIENTOS
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .integrante-page *,
+    .integrante-header * {
+        scroll-behavior: auto;
+        transition-duration: 0.01ms;
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+    }
+}

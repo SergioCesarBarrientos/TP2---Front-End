@@ -2,9 +2,13 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import "./inicio.css";
+import "./Inicio.css";
+import portada from "../assets/img/portada.png";//este se usa?
 import sergioFoto from "../assets/img/sergio.png";
 import marianaFoto from "../assets/img/mariana.jpg";
+import carolinaFoto from "../assets/img/carolina.png";
+import fotoMiguel from "../assets/img/miguel.png";
+
 const integrantes = [
   {
     id: 1,
@@ -26,19 +30,21 @@ const integrantes = [
   },
   {
     id: 3,
-    nombre: "Persona 3",
-    puesto: "Desarrollador Frontend",
-    linkedin: "https://www.linkedin.com/",
-    github: "https://github.com/",
-    ruta: "/Equipo/persona-3",
+    nombre: "Carolina Silva Cotto",
+    puesto: "Desarrolladora Frontend",
+    foto: carolinaFoto,
+    linkedin: "https://www.linkedin.com/in/carolina-silva-cotto",
+    github: "https://github.com/csilvacotto-2202",
+    ruta: "/Equipo/carolina-silva-cotto",
   },
   {
     id: 4,
-    nombre: "Persona 4",
+    nombre: "Miguel Marcaida",
     puesto: "Desarrollador Frontend",
+    foto: fotoMiguel,
     linkedin: "https://www.linkedin.com/",
-    github: "https://github.com/",
-    ruta: "/Equipo/persona-4",
+    github: "https://github.com/Miguel-Marcaida",
+    ruta: "/Equipo/miguel-marcaida",
   },
   {
     id: 5,
@@ -61,9 +67,9 @@ function Inicio() {
   };
 
   const verPerfil = (integrante) => {
-  navigate(integrante.ruta);
-  window.scrollTo(0, 0);
-};
+    navigate(integrante.ruta);
+    window.scrollTo(0, 0);
+  };
 
   return (
     <main className="home">
@@ -78,22 +84,14 @@ function Inicio() {
           </h1>
 
           <p>
-            Somos el equipo TechArg y desarrollamos esta
-            página de películas para esta segunda entrega
-            de la materia DSWF de IFTS 29.
+            Somos el equipo TechArg y desarrollamos esta página de películas
+            para esta segunda entrega de la materia DSWF de IFTS 29.
           </p>
 
           <button className="banner-boton" onClick={irAEquipo}>
             Conocé al equipo
             <ArrowRight size={18} />
           </button>
-        </div>
-
-        <div className="banner-decoracion" aria-hidden="true">
-          <div className="banner-circulo circulo-uno" />
-          <div className="banner-circulo circulo-dos" />
-          <div className="banner-circulo circulo-tres" />
-          <div className="banner-codigo">&lt;/&gt;</div>
         </div>
       </section>
 
@@ -120,15 +118,9 @@ function Inicio() {
               <article
                 key={integrante.id}
                 className={`equipo-card ${
-                  activa
-                    ? `card-seleccionada ${colorSeleccion}`
-                    : ""
+                  activa ? `card-seleccionada ${colorSeleccion}` : ""
                 }`}
-                onClick={() =>
-                  setTarjetaActiva(
-                    activa ? null : integrante.id
-                  )
-                }
+                onClick={() => setTarjetaActiva(activa ? null : integrante.id)}
               >
                 <div className="foto-contenedor">
                   {integrante.foto ? (
@@ -149,9 +141,7 @@ function Inicio() {
                 <div className="card-contenido">
                   <h3>{integrante.nombre}</h3>
 
-                  <p className="integrante-puesto">
-                    {integrante.puesto}
-                  </p>
+                  <p className="integrante-puesto">{integrante.puesto}</p>
 
                   <div className="integrante-redes">
                     <a
