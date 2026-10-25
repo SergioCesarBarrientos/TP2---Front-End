@@ -66,7 +66,7 @@ Declaramos las aplicaciones y los modelos de IA que usamos. Distinguimos la **ap
 | Sergio Cesar Barrientos | ⚠️ COMPLETAR | ⚠️ COMPLETAR | ⚠️ COMPLETAR |
 | Mariana Sosa | ⚠️ COMPLETAR | ⚠️ COMPLETAR | ⚠️ COMPLETAR |
 | Karina Sánchez |  Google Gemini (gemini.google.com) | Gemini | Asistencia en la integración de componentes de React |
-| Miguel Marcaida | DeepSeek (chat.deepseek.com) | DeepSeek-V3 | Asistencia en la resolución de conflictos de Git, creación y diseño de la tarjeta de perfil, conexión de rutas y ajustes de CSS responsivo. |
+| Miguel Marcaida | DeepSeek (git add README.mdchat.deepseek.com) | DeepSeek-V3 | Asistencia en la resolución de conflictos de Git, creación y diseño de la tarjeta de perfil, conexión de rutas y ajustes de CSS responsivo.|
 
 Todo lo generado con IA fue revisado, adaptado y probado por el equipo.
 
