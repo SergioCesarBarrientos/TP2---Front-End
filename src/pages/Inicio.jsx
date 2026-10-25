@@ -8,6 +8,7 @@ import sergioFoto from "../assets/img/sergio.png";
 import marianaFoto from "../assets/img/mariana.jpg";
 import carolinaFoto from "../assets/img/carolina.png";
 import fotoMiguel from "../assets/img/miguel.png";
+import karinaFoto from "../assets/img/karina.png";
 
 const integrantes = [
   {
@@ -48,11 +49,12 @@ const integrantes = [
   },
   {
     id: 5,
-    nombre: "Persona 5",
-    puesto: "Desarrollador Frontend",
-    linkedin: "https://www.linkedin.com/",
-    github: "https://github.com/",
-    ruta: "/Equipo/persona-5",
+    nombre: "Karina Sánchez",
+    puesto: "Desarrolladora Frontend",
+    foto: karinaFoto,
+    linkedin: "https://www.linkedin.com/in/karina-sanchez-46165228a/",
+    github: "https://github.com/karinaluciasanz",
+    ruta: "/Equipo/karina-sanchez",
   },
 ];
 
