@@ -7,6 +7,9 @@ function PeliculasJson() {
     const [genero, setGenero] = useState("");
     const [tituloBuscado, setTituloBuscado] = useState("");
     const [generoBuscado, setGeneroBuscado] = useState("");
+    
+    // NUEVO ESTADO: Guarda el ID de la película que está desplegada
+    const [idExpandido, setIdExpandido] = useState(null);
 
     const generos = [
         ...new Set(peliculas.map((pelicula) => pelicula.genero)),
@@ -34,7 +37,13 @@ function PeliculasJson() {
         setGenero("");
         setTituloBuscado("");
         setGeneroBuscado("");
+        setIdExpandido(null); // Cerramos las tarjetas al limpiar
     }
+
+    // Función para abrir/cerrar el detalle de una tarjeta
+    const toggleDetalle = (id) => {
+        setIdExpandido(idExpandido === id ? null : id);
+    };
 
     return (
         <>
@@ -45,47 +54,33 @@ function PeliculasJson() {
             <main className="catalogo-json-pagina">
                 <section className="catalogo-json-intro">
                     <p className="catalogo-json-etiqueta">CATÁLOGO</p>
-
                     <h1>Películas (JSON Local)</h1>
-
                     <p className="catalogo-json-descripcion">
-                        Explorá el catálogo de películas guardado en un
-                        archivo JSON local.
+                        Explorá el catálogo de películas guardado en un archivo JSON local.
                     </p>
                 </section>
 
                 <section className="catalogo-json-busqueda">
                     <form onSubmit={buscarPeliculas}>
                         <div className="catalogo-json-campo">
-                            <label htmlFor="buscar-titulo">
-                                Buscar por título
-                            </label>
-
+                            <label htmlFor="buscar-titulo">Buscar por título</label>
                             <input
                                 id="buscar-titulo"
                                 type="text"
                                 placeholder="Escribí un título..."
                                 value={titulo}
-                                onChange={(event) =>
-                                    setTitulo(event.target.value)
-                                }
+                                onChange={(event) => setTitulo(event.target.value)}
                             />
                         </div>
 
                         <div className="catalogo-json-campo">
-                            <label htmlFor="buscar-genero">
-                                Buscar por género
-                            </label>
-
+                            <label htmlFor="buscar-genero">Buscar por género</label>
                             <select
                                 id="buscar-genero"
                                 value={genero}
-                                onChange={(event) =>
-                                    setGenero(event.target.value)
-                                }
+                                onChange={(event) => setGenero(event.target.value)}
                             >
                                 <option value="">Todos los géneros</option>
-
                                 {generos.map((genero) => (
                                     <option key={genero} value={genero}>
                                         {genero}
@@ -94,10 +89,7 @@ function PeliculasJson() {
                             </select>
                         </div>
 
-                        <button
-                            className="catalogo-json-boton"
-                            type="submit"
-                        >
+                        <button className="catalogo-json-boton" type="submit">
                             Buscar
                         </button>
                     </form>
@@ -116,66 +108,68 @@ function PeliculasJson() {
                 <section className="catalogo-json-resultados">
                     <div className="catalogo-json-resultados-cabecera">
                         <h2>Películas disponibles</h2>
-
                         <span>
                             {peliculasFiltradas.length}{" "}
-                            {peliculasFiltradas.length === 1
-                                ? "película"
-                                : "películas"}
+                            {peliculasFiltradas.length === 1 ? "película" : "películas"}
                         </span>
                     </div>
 
                     {peliculasFiltradas.length > 0 ? (
                         <div className="catalogo-json-grid">
-                            {peliculasFiltradas.map((pelicula) => (
-                                <article
-                                    className="catalogo-json-card"
-                                    key={pelicula.id}
-                                >
-                                    <div className="catalogo-json-poster">
-                                        <img
-                                            className="catalogo-json-imagen"
-                                            src={pelicula.imagen}
-                                            alt={`Póster de ${pelicula.titulo}`}
-                                            loading="lazy"
-                                        />
-                                    </div>
-
-                                    <div className="catalogo-json-info">
-                                        <span className="catalogo-json-genero">
-                                            {pelicula.genero}
-                                        </span>
-
-                                        <h3>{pelicula.titulo}</h3>
-
-                                        <div className="catalogo-json-detalles">
-                                            <p>
-                                                <strong>Año:</strong>{" "}
-                                                {pelicula.anio}
-                                            </p>
-
-                                            <p>
-                                                <strong>Calificación:</strong>{" "}
-                                                <span className="catalogo-json-calificacion">
-                                                    ★ {pelicula.calificacion}/10
-                                                </span>
-                                            </p>
-
+                            {peliculasFiltradas.map((pelicula) => {
+                                const expandida = idExpandido === pelicula.id;
+                                return (
+                                    <article className="catalogo-json-card" key={pelicula.id}>
+                                        <div className="catalogo-json-poster">
+                                            <img
+                                                className="catalogo-json-imagen"
+                                                src={pelicula.imagen}
+                                                alt={`Póster de ${pelicula.titulo}`}
+                                                loading="lazy"
+                                            />
                                         </div>
-                                    </div>
-                                </article>
-                            ))}
+
+                                        <div className="catalogo-json-info">
+                                            <span className="catalogo-json-genero">
+                                                {pelicula.genero}
+                                            </span>
+                                            <h3>{pelicula.titulo}</h3>
+                                            
+                                            <div className="catalogo-json-detalles">
+                                                <p><strong>Año:</strong> {pelicula.anio}</p>
+                                                <p>
+                                                    <strong>Calificación:</strong>{" "}
+                                                    <span className="catalogo-json-calificacion">
+                                                        ★ {pelicula.calificacion}/10
+                                                    </span>
+                                                </p>
+                                            </div>
+
+                                            {/* BOTÓN PARA VER MÁS */}
+                                            <button
+                                                className="catalogo-json-ver-mas"
+                                                onClick={() => toggleDetalle(pelicula.id)}
+                                            >
+                                                {expandida ? "Ver menos" : "Ver más"}
+                                            </button>
+
+                                            {/* DETALLE ADICIONAL (SE MUESTRA SI ESTÁ EXPANDIDA) */}
+                                            {expandida && (
+                                                <div className="catalogo-json-detalle-extra">
+                                                    <p><strong>Sinopsis:</strong> {pelicula.sinopsis || "Sin sinopsis disponible."}</p>
+                                                    <p><strong>Director:</strong> {pelicula.director || "Desconocido"}</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </article>
+                                );
+                            })}
                         </div>
                     ) : (
                         <div className="catalogo-json-sin-resultados">
                             <span>🎬</span>
-
                             <h3>No encontramos películas</h3>
-
-                            <p>
-                                Probá con otro título o seleccioná otro género.
-                            </p>
-
+                            <p>Probá con otro título o seleccioná otro género.</p>
                             <button
                                 className="catalogo-json-boton"
                                 type="button"
