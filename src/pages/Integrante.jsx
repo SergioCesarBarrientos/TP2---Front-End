@@ -7,6 +7,7 @@ import sergioFoto from "../assets/img/sergio.png";
 import marianaFoto from "../assets/img/mariana.jpg";
 import carolinaFoto from "../assets/img/carolina.png";
 import fotoMiguel from "../assets/img/miguel.png";
+import karinaFoto from "../assets/img/karina.png";
 
 function Integrante() {
   const { id } = useParams();
@@ -181,21 +182,45 @@ function Integrante() {
       ],
     },
 
-    "persona-5": {
-      nombre: "Persona 5",
+    "karina-sanchez": {
+      nombre: "Karina Sánchez",
       rol: "Estudiante y desarrollador web",
-      ciudad: "",
-      edad: null,
+      ciudad: "Zarate, Buenos Aires",
+      edad: 29,
       descripcion:
         "Integrante del Equipo 32, participando en el desarrollo de TechArg.",
-      foto: "",
-      linkedin: "https://www.linkedin.com",
-      github: "https://github.com",
+      foto: karinaFoto,
+      linkedin: "https://www.linkedin.com/in/karina-sanchez-46165228a/",
+      github: "https://github.com/karinaluciasanz",
       estudios: "Estudiante de IFTS 29",
-      tecnologias: ["HTML", "CSS", "JavaScript", "React"],
-      intereses: ["Programación", "Tecnología"],
-      peliculas: [],
-      musica: [],
+      tecnologias: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "MySQL",
+        "Java",
+        "Node.js",
+        "Android",
+        "CorelDRAW",
+        "Git",
+      ],
+      intereses: [
+        "Desarrollo Frontend",
+        "Diseño Gráfico",
+        "Bases de Datos",
+        "Desarrollo Mobile",
+      ],
+      peliculas: [
+        { titulo: "Black Swan", anio: 2010, director: "Darren Aronofsky" },
+        { titulo: "Guardians of the Galaxy", anio: 2014, director: "James Gunn" },
+        { titulo: "Avengers", anio: 2012, director: "Joss Whedon" },
+      ],
+      musica: [
+        { titulo: "Smooth Operator", artista: "Sade" },
+        { titulo: "Late Night", artista: "Solomun" },
+        { titulo: "Gravity", artista: "Boris Brejcha" },
+      ],
     },
   };
   const integrante = integrantes[id];
