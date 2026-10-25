@@ -26,7 +26,7 @@ function PeliculasAPI() {
         const res = await fetch(
           `https://api.tvmaze.com/search/shows?q=${busqueda}`,
         );
-        if (!res.ok) throw new Error("Error al buscar películas");
+        if (!res.ok) throw new Error("Error al buscar series");
 
         const data = await res.json();
         const peliculasSeguras = Array.isArray(data) ? data : [];
@@ -64,9 +64,9 @@ function PeliculasAPI() {
       <div className="peliculas-pagina">
         <section className="peliculas-intro">
           <p className="peliculas-etiqueta">CATÁLOGO</p>
-          <h1>Películas API</h1>
+          <h1>Series API</h1>
           <p className="peliculas-descripcion">
-            Explorá las películas más populares con la API.
+            Buscá series en TVMaze: nombre, géneros, imagen y descripción.
           </p>
         </section>
 
@@ -113,18 +113,30 @@ function PeliculasAPI() {
 
         <section className="peliculas-resultados">
           <div className="peliculas-resultados-cabecera">
-            <h2>Películas disponibles</h2>
+            <h2>Series disponibles</h2>
           </div>
 
           <div className="peliculas-grid">
-            {cargando && <p>Buscando películas...</p>}
-            {error && <p style={{ color: "red" }}>Hubo un error: {error}</p>}
+            {cargando && <p>Buscando series...</p>}
+
+            {error && (
+              <div style={{ textAlign: "center", margin: "20px 0", gridColumn: "1 / -1" }}>
+                <p style={{ color: "red" }}>Hubo un error: {error}</p>
+                <button
+                  className="peliculas-boton"
+                  onClick={() => setBusqueda(inputValue)}
+                  style={{ marginTop: "10px" }}
+                >
+                  Reintentar
+                </button>
+              </div>
+            )}
 
             {!cargando &&
               !error &&
               peliculasFiltradas.length === 0 &&
               busqueda !== "" && (
-                <p>No se encontraron resultados con esos filtros.</p>
+                <p style={{ gridColumn: "1 / -1" }}>No se encontraron resultados con esos filtros.</p>
               )}
 
             {!cargando &&

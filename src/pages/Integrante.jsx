@@ -160,7 +160,7 @@ function Integrante() {
       ciudad: "San Miguel de Tucuman",
       edad: 39,
       descripcion:
-        "Soy estudiante de la Tecnicatura en Desarrollo de Software en el IFTS 29. Me apasiona el desarrollo web frontend, la integración de APIs y el despliegue de aplicaciones.",
+        "Soy estudiante de la Tecnicatura en Desarrollo de Software en el IFTS 29. Me enfoco en el desarrollo web frontend, la integración de APIs y el despliegue de aplicaciones. Me interesa entender el funcionamiento interno de las herramientas que uso y aplicar esos conocimientos en proyectos concretos.",
       foto: fotoMiguel,
       linkedin:
         "https://www.linkedin.com/in/miguelmarcaida/?isSelfProfile=true",
@@ -169,16 +169,20 @@ function Integrante() {
       tecnologias: ["HTML", "CSS", "JavaScript", "React", "Vite", "Git"],
       intereses: ["Desarrollo Web", "Frontend", "APIs", "Testing"],
       peliculas: [
-        { titulo: "Interestelar", anio: 2014, director: "Christopher Nolan" },
         {
-          titulo: "El Señor de los Anillos",
-          anio: 2001,
-          director: "Peter Jackson",
+          titulo: "Batman: El Caballero de la Noche",
+          anio: 2008,
+          director: "Christopher Nolan",
+        },
+        {
+          titulo: "Transformers 4: La Era de la Extinción",
+          anio: 2014,
+          director: "Michael Bay",
         },
       ],
       musica: [
-        { titulo: "Bohemian Rhapsody", artista: "Queen" },
-        { titulo: "De Música Ligera", artista: "Soda Stereo" },
+        { titulo: "Ramito de Violetas", artista: "La Mona Jiménez" },
+        { titulo: "La Ley Y La Trampa", artista: "Chaqueño Palavecino" },
       ],
     },
 
@@ -213,7 +217,11 @@ function Integrante() {
       ],
       peliculas: [
         { titulo: "Black Swan", anio: 2010, director: "Darren Aronofsky" },
-        { titulo: "Guardians of the Galaxy", anio: 2014, director: "James Gunn" },
+        {
+          titulo: "Guardians of the Galaxy",
+          anio: 2014,
+          director: "James Gunn",
+        },
         { titulo: "Avengers", anio: 2012, director: "Joss Whedon" },
       ],
       musica: [
