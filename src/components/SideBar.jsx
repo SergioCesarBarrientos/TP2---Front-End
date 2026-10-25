@@ -47,7 +47,7 @@ function SideBar() {
 
   const menuItems = [
     { name: "Inicio", path: "/", icon: House },
-    { name: "Películas API", path: "/PeliculasAPI", icon: Film },
+    { name: "Series API", path: "/PeliculasAPI", icon: Film },
     { name: "Películas JSON", path: "/PeliculasJson", icon: Database },
     { name: "Árbol", path: "/Arbol", icon: GitBranch },
     { name: "Bitácora", path: "/Bitacora", icon: BookOpen },
