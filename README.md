@@ -1,20 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
 # TechArg — TP2 Proyecto React en equipo
 
 Trabajo Práctico Grupal 2 · Desarrollo de Sistemas Web (Front End) · 2.º cuatrimestre 2026 · Tecnicatura Superior en Desarrollo de Software a Distancia, IFTS 29 · Equipo 32 – 2.º B
@@ -50,7 +33,7 @@ Contiene:
 
 | Integrante | GitHub | Responsabilidad |
 | :--- | :--- | :--- |
-| Sergio Cesar Barrientos | [@SergioCesarBarrientos](https://github.com/SergioCesarBarrientos) | ⚠️ COMPLETAR |
+| Sergio Cesar Barrientos | [@SergioCesarBarrientos](https://github.com/SergioCesarBarrientos) | Esqueleto del proyecto, implementación de estructura, paleta de colores & fuentes Perfil propio (datos, foto, tarjeta de portada), diseño responsive, implementación de archivos JSON |
 | Mariana Sosa | [@MaruSosa](https://github.com/MaruSosa) | ⚠️ COMPLETAR |
 | Carolina Silva Cotto | [@csilvacotto-2202](https://github.com/csilvacotto-2202) | Perfil propio (datos, foto, tarjeta de portada y entrada en la sidebar) y configuración de `vercel.json` para el deploy, y redacción del README. |
 | Karina Sánchez | [@karinaluciasanz](https://github.com/karinaluciasanz) | Perfil propio (datos, foto, tarjeta de presentación, integración en la página principal y ruta en Integrante.jsx) y maquetación de componentes del equipo.|
@@ -63,7 +46,7 @@ Declaramos las aplicaciones y los modelos de IA que usamos. Distinguimos la **ap
 | Integrante | Aplicación | Modelo | En qué contenido o tarea |
 | :--- | :--- | :--- | :--- |
 | Carolina Silva Cotto | Claude (claude.ai) | Sonnet 5.5 | Se utilizó Claude como herramienta de asistencia durante el desarrollo del proyecto, para resolver dudas técnicas y colaborar en la documentación del proyecto. |
-| Sergio Cesar Barrientos | ⚠️ COMPLETAR | ⚠️ COMPLETAR | ⚠️ COMPLETAR |
+| Sergio Cesar Barrientos | ChatGPT | Version gratuita | Asistencia en la integración de componentes y recomendaciones de diseño y paletas |
 | Mariana Sosa | ⚠️ COMPLETAR | ⚠️ COMPLETAR | ⚠️ COMPLETAR |
 | Karina Sánchez |  Google Gemini (gemini.google.com) | Gemini | Asistencia en la integración de componentes de React |
 | Miguel Marcaida | DeepSeek (git add README.mdchat.deepseek.com) | DeepSeek-V3 | Asistencia en la resolución de conflictos de Git, creación y diseño de la tarjeta de perfil, conexión de rutas y ajustes de CSS responsivo.|
@@ -73,6 +56,23 @@ Todo lo generado con IA fue revisado, adaptado y probado por el equipo.
 ## Tecnologías
 
 React 19, Vite, React Router, lucide-react y react-icons. Publicado en Vercel.
+
+### Tipografías
+
+Montserrat: utilizada para títulos y textos destacados.
+
+Inter: utilizada para el cuerpo de los textos.
+
+**## Paleta de colores**
+
+| Variable CSS | Color | Código |
+|---|---|---|
+| Color primario | Azul | `#1976D2` |
+| Color secundario | Verde | `#2E7D32` |
+| Color primario suave | Azul claro | `#E3F2FD` |
+| Color secundario suave | Verde claro | `#A5D6A7` |
+| Texto principal | Gris oscuro | `#263238` |
+| Texto secundario | Gris azulado | `#90A4AE` |
 
 ## Cómo correr el proyecto
 
