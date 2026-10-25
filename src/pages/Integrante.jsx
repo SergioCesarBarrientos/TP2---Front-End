@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { GraduationCap, Code2, Heart, Film, Music } from "lucide-react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import "./Integrante.css";
@@ -80,7 +80,7 @@ function Integrante() {
       descripcion:
         "Soy estudiante de Ingeniería en Sistemas y Desarrollo de Software. Me apasiona la programación, el desarrollo web y la creación de soluciones tecnológicas, combinando la lógica del código con el diseño.",
       foto: marianaFoto,
-      linkedin: "www.linkedin.com/in/mariana-sosa-0b2378185",
+      linkedin: "https://www.linkedin.com/in/mariana-sosa-0b2378185",
       github: "https://github.com/MaruSosa",
       estudios: "Ingeniería en Sistemas y Desarrollo de Software",
       tecnologias: [
@@ -224,6 +224,9 @@ function Integrante() {
     },
   };
   const integrante = integrantes[id];
+  if (!integrante) {
+    return <Navigate to="/" replace />;
+  }
 
   return (
     <>

@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import "./Inicio.css";
-import portada from "../assets/img/portada.png";//este se usa?
 import sergioFoto from "../assets/img/sergio.png";
 import marianaFoto from "../assets/img/mariana.jpg";
 import carolinaFoto from "../assets/img/carolina.png";
@@ -25,7 +24,7 @@ const integrantes = [
     nombre: "Mariana Sosa",
     puesto: "Desarrolladora Frontend",
     foto: marianaFoto,
-    linkedin: "www.linkedin.com/in/mariana-sosa-0b2378185",
+    linkedin: "https://www.linkedin.com/in/mariana-sosa-0b2378185",
     github: "https://github.com/MaruSosa",
     ruta: "/Equipo/mariana-sosa",
   },
