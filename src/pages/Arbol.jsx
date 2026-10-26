@@ -121,6 +121,11 @@ function NodoComponente({ nodo }) {
 export default function Arbol() {
   return (
     <div className="arbol-page">
+      {/* ACÁ ESTÁ LA MAGIA: EL HEADER QUE EMPUJA TODO HACIA ABAJO */}
+      <header className="marca-superior">
+        IFTS<span>29</span>
+      </header>
+
       <h1>Árbol de renderizado</h1>
       <p>
         Jerarquía de componentes de la aplicación. Tocá un nodo para expandirlo
