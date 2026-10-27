@@ -1,6 +1,21 @@
-# TP2 — TechArg — Proyecto React en equipo
+🇦🇷 TechArg — TP2 | Proyecto React en equipo
 
-Trabajo Práctico Grupal 2 · Desarrollo de Sistemas Web (Front End) · 2.º cuatrimestre 2026 · Tecnicatura Superior en Desarrollo de Software a Distancia, IFTS 29 · Equipo 32 – 2.º B
+<p align="center">
+<img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" />
+<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+<img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white" alt="React Router" />
+<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+</p>
+
+<p align="center">
+<strong>Trabajo Práctico Grupal 2 · Desarrollo de Sistemas Web (Front End)</strong>
+<br />
+Tecnicatura Superior en Desarrollo de Software a Distancia
+<br />
+🏫 IFTS 29 · 👥 Equipo 32 — 2.º B
+<br />
+📅 2.º cuatrimestre de 2026
+</p>
 
 ## Índice
 
@@ -16,7 +31,7 @@ Trabajo Práctico Grupal 2 · Desarrollo de Sistemas Web (Front End) · 2.º cua
 
 **TechArg** es una aplicación web hecha con React que presenta a nuestro equipo y organiza sus contenidos. Continúa el proyecto del TP1 y lo lleva a React, con una sidebar compartida que permanece visible mientras cambia el contenido de cada sección.
 
-En esta segunda entrega optamos por un estilo minimalista, claro y limpio. El proyecto debe verse como una red social de perfiles básica-estándar con una paleta de colores suaves y no tan cargados como en el TP1.  
+Para esta segunda entrega, elegimos un diseño minimalista, limpio y ordenado, inspirado en una red social de perfiles. Buscamos una interfaz clara e intuitiva, con una paleta de colores suaves y equilibrados que aporte una apariencia más moderna y visualmente ligera en comparación con la versión del TP1.
 
 Contiene:
 
