@@ -70,17 +70,33 @@ Declaramos las aplicaciones y los modelos de IA que usamos. Distinguimos la **ap
 
 Todo lo generado con IA fue revisado, adaptado y probado por el equipo.
 
-## Tecnologías
+## 🛠️ Tecnologías, Herramientas y librerías
+<p>
+<img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+<img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
+<img src="https://img.shields.io/badge/React_Router-CA4245?style=flat-square&logo=reactrouter&logoColor=white" alt="React Router" />
+<img src="https://img.shields.io/badge/Lucide_React-F56565?style=flat-square&logo=lucide&logoColor=white" alt="Lucide React" />
+<img src="https://img.shields.io/badge/React_Icons-E91E63?style=flat-square" alt="React Icons" />
+<img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
+</p>
 
-React 19, Vite, React Router, lucide-react y react-icons. Publicado en Vercel.
+⚛️ React 19: construcción de la interfaz mediante componentes.
 
-### Tipografías
+⚡ Vite: entorno de desarrollo y herramientas de compilación.
+
+🧭 React Router: navegación entre las distintas secciones.
+
+🎨 Lucide React y React Icons: iconografía de la aplicación.
+
+☁️ Vercel: publicación del sitio web.
+
+## 🔤 Tipografías
 
 Montserrat: utilizada para títulos y textos destacados.
 
-Inter: utilizada para el cuerpo de los textos.
+Inter: utilizada para el cuerpo de los textos, priorizando la legibilidad.
 
-## Paleta de colores
+## 🎨 Paleta de colores
 
 | Variable CSS | Color | Código |
 |---|---|---|
@@ -91,14 +107,46 @@ Inter: utilizada para el cuerpo de los textos.
 | Texto principal | Gris oscuro | `#263238` |
 | Texto secundario | Gris azulado | `#90A4AE` |
 
-## Cómo correr el proyecto
+## 🚀 Cómo correr el proyecto
+📋 Requisitos previos
+
+Node.js instalado.
+
+npm instalado.
+
+## ⚙️ Instalación y ejecución
+
+Clonar el repositorio:
+
+```bash
+git clone URL_DEL_REPOSITORIO
+```
+
+Entrar en la carpeta del proyecto:
+
+```bash
+cd NOMBRE_DE_LA_CARPETA
+```
+
+Instalar las dependencias:
 
 ```bash
 npm install
+```
+
+Iniciar el servidor de desarrollo:
+
+```bash
 npm run dev
 ```
 
-Después abrir el enlace que muestra la terminal (normalmente `http://localhost:5173`).
+Abrir en el navegador la dirección que aparece en la terminal, normalmente:
+
+```bash
+http://localhost:5173
+```
+
+📌 Reemplazá URL_DEL_REPOSITORIO y NOMBRE_DE_LA_CARPETA por los datos reales del repositorio.
 
 ## Capturas
 
