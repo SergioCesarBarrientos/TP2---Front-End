@@ -16,6 +16,8 @@ Trabajo Práctico Grupal 2 · Desarrollo de Sistemas Web (Front End) · 2.º cua
 
 **TechArg** es una aplicación web hecha con React que presenta a nuestro equipo y organiza sus contenidos. Continúa el proyecto del TP1 y lo lleva a React, con una sidebar compartida que permanece visible mientras cambia el contenido de cada sección.
 
+En esta segunda entrega optamos por un estilo minimalista, claro y limpio. El proyecto debe verse como una red social de perfiles básica-estándar con una paleta de colores suaves y no tan cargados como en el TP1.  
+
 Contiene:
 
 - **Portada:** presentación del equipo y acceso a los perfiles de cada integrante.
