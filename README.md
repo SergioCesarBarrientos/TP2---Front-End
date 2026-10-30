@@ -23,8 +23,8 @@ Tecnicatura Superior en Desarrollo de Software a Distancia
 - [Sitio publicado](#sitio-publicado)
 - [Integrantes](#integrantes)
 - [Uso de IA](#uso-de-ia)
-- [Tecnologías](#tecnologías)
-- [Cómo correr el proyecto](#cómo-correr-el-proyecto)
+- [Tecnologías](#tecnologías-herramientas-y-librerías)
+- [Cómo correr el proyecto](#Cómo-correr-el-proyecto)
 - [Capturas](#capturas)
 
 ## Descripción del proyecto
