@@ -24,7 +24,7 @@ Tecnicatura Superior en Desarrollo de Software a Distancia
 - [Sitio publicado](#sitio-publicado)
 - [Integrantes](#integrantes)
 - [Uso de IA](#uso-de-ia)
-- [Tecnologías, herramientas y librerías](#tecnologías)
+- [Tecnologías, herramientas y librerías](#tecnologias)
 - [Cómo correr el proyecto](#-cómo-correr-el-proyecto)
 - [Capturas](#capturas)
 
@@ -94,6 +94,7 @@ Declaramos las aplicaciones y los modelos de IA que usamos. Distinguimos la **ap
 
 Todo lo generado con IA fue revisado, adaptado y probado por el equipo.
 
+<a id="tecnologias"></a>
 ## 🛠️ Tecnologías, Herramientas y librerías
 
 <p>
