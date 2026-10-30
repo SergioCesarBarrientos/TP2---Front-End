@@ -24,7 +24,7 @@ Tecnicatura Superior en Desarrollo de Software a Distancia
 - [Sitio publicado](#sitio-publicado)
 - [Integrantes](#integrantes)
 - [Uso de IA](#uso-de-ia)
-- [Tecnologías, herramientas y librerías](#-tecnologías)
+- [Tecnologías, herramientas y librerías](#tecnologías)
 - [Cómo correr el proyecto](#-cómo-correr-el-proyecto)
 - [Capturas](#capturas)
 
@@ -95,6 +95,7 @@ Declaramos las aplicaciones y los modelos de IA que usamos. Distinguimos la **ap
 Todo lo generado con IA fue revisado, adaptado y probado por el equipo.
 
 ## 🛠️ Tecnologías, Herramientas y librerías
+
 <p>
 <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
 <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
