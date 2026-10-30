@@ -33,14 +33,37 @@ Tecnicatura Superior en Desarrollo de Software a Distancia
 
 Para esta segunda entrega, elegimos un diseño minimalista, limpio y ordenado, inspirado en una red social de perfiles. Buscamos una interfaz clara e intuitiva, con una paleta de colores suaves y equilibrados que aporte una apariencia más moderna y visualmente ligera en comparación con la versión del TP1.
 
-Contiene:
+## ✨ Funcionalidades principales
 
-- **Portada:** presentación del equipo y acceso a los perfiles de cada integrante.
-- **Perfiles:** una página por integrante con su formación, tecnologías, intereses, películas y música favoritas.
-- **Películas (JSON local):** catálogo de 20 películas con búsqueda por título y filtro por género.
-- **Peliculas API (API pública de TVMaze):** listado obtenido de una API pública, con mensajes de carga y de error. Desarrollo de la lógica de conexión con la API pública de TVMaze utilizando fetch y useEffect, implementando búsqueda por título con estado de carga y manejo de errores.
-- **Árbol de renderizado:** jerarquía de componentes de la aplicación.
-- **Bitácora:** registro del proceso de trabajo del equipo.
+- **Portada:** presentación del equipo y acceso a los perfiles individuales mediante tarjetas interactivas.
+- **Perfiles:** una página por integrante con información personal, formación, tecnologías, intereses, películas y música favoritas.
+- **Menú hamburguesa:** navegación lateral adaptable a dispositivos móviles, con apertura y cierre del menú, fondo superpuesto y cierre automático al seleccionar una sección.
+- **Diseño responsive:** adaptación de la interfaz a diferentes resoluciones y dispositivos, incluyendo escritorio, tablets y celulares.
+- **Películas (JSON local):** catálogo de 20 películas con búsqueda por título, filtro por género y tarjetas expandibles que muestran información adicional.
+- **Series API (TVMaze):** consulta de series mediante una API pública, con búsqueda por título, filtro por género, estados de carga, manejo de errores y posibilidad de reintentar la consulta.
+- **Árbol de renderizado:** representación de la jerarquía de componentes de la aplicación.
+- **Bitácora:** registro de avances, decisiones y dificultades durante el desarrollo del proyecto, con filtros por categoría.
+
+## ⚛️ Hooks de React y manejo de estados
+
+Durante el desarrollo utilizamos diferentes hooks de React y herramientas de React Router para gestionar estados, controlar efectos secundarios y administrar la navegación de la aplicación.
+
+### ⚛️ Hooks de React
+
+- **`useState`:** utilizado para administrar los estados de los componentes y controlar las interacciones del usuario, como la apertura del menú hamburguesa, la selección de tarjetas, los filtros de búsqueda, las tarjetas expandibles y los resultados de la API.
+- **`useEffect`:** utilizado en la sección Series API para ejecutar consultas a TVMaze cuando cambia el término de búsqueda, actualizando los resultados y controlando los estados de carga y error.
+
+### 🧭 Hooks y herramientas de React Router
+
+- **`useNavigate`:** permite realizar navegaciones programáticas entre las distintas secciones y los perfiles de los integrantes.
+- **`useLocation`:** permite conocer la ruta actual para identificar la sección seleccionada en la barra lateral.
+- **`useParams`:** permite obtener el identificador del integrante desde la URL y mostrar su perfil correspondiente.
+- **`Navigate`:** permite redirigir al inicio cuando se intenta acceder a un perfil inexistente.
+
+### 🛠️ Otros recursos de React
+
+- **Renderizado condicional:** utilizado para mostrar u ocultar elementos según los estados y los datos disponibles.
+- **Método `map()`:** utilizado para generar dinámicamente listas de integrantes, películas, canciones y registros de la bitácora.
 
 ## Sitio publicado
 
