@@ -17,14 +17,15 @@ Tecnicatura Superior en Desarrollo de Software a Distancia
 📅 2.º cuatrimestre de 2026
 </p>
 
+
 ## Índice
 
 - [Descripción del proyecto](#descripción-del-proyecto)
 - [Sitio publicado](#sitio-publicado)
 - [Integrantes](#integrantes)
 - [Uso de IA](#uso-de-ia)
-- [Tecnologías](#tecnologías-herramientas-y-librerías)
-- [Cómo correr el proyecto](#Cómo-correr-el-proyecto)
+- [Tecnologías, herramientas y librerías](#-tecnologías-herramientas-y-librerías)
+- [Cómo correr el proyecto](#-cómo-correr-el-proyecto)
 - [Capturas](#capturas)
 
 ## Descripción del proyecto
