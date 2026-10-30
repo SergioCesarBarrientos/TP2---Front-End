@@ -199,3 +199,12 @@ http://localhost:5173
 **Bitácora**
 
 ![Bitácora](capturas/bitacora.png)
+
+
+**Responsive**
+
+![Tablet](capturas/tablet.png)
+
+**Mobile**
+
+![Mobile](capturas/mobile.png)
